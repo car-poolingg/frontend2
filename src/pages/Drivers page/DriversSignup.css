@@ -1,0 +1,25 @@
+.NavTop{
+    width: 100%;
+    height: 70px;
+    background-color: #0C3EAD;
+    display: flex;
+    padding: 7% 0 0 5%;
+    color: white;
+}
+.NavTopText{
+    margin: 0% auto 0 auto;
+
+}
+.BackIcon{
+    margin: 0% ;
+    background-color: ;
+}
+.iconEllipse{
+    width: 29px;
+    height: 29px;
+    background-color: white;
+    border-radius: 50%; /* This creates the ellipse shape */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
