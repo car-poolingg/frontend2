@@ -19,8 +19,31 @@ const DriversLogin = () => {
         <p>Sign up as a driver below</p>
 
         <div className='RegistrationInputs'>
-          <p>Phone number</p>
-          <input type="number" name="PhoneNumber" id="PhoneNO" />
+            <form action="">
+              <div className='InputFields'>
+              <label for="phone">Phone Number</label>
+              <input type="tel" name="phone" id="phone" placeholder="+234" />
+              </div>
+              <div className='InputFields'>
+              <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" />
+              </div>
+              <div className='InputFields'>
+                <label for="City">City</label>
+                <input type="text" name="City" id="City" />
+              </div>
+              <div className='InputFields'>
+                <label for="Password">Password</label>
+                <input type="password" name="Password" id="Password" />
+              </div>
+              <div className='InputFields'>
+                <label for="ConfirmPassword">Confirm Password</label>
+                <input type="password" name="ConfirmPassword" id="ConfirmPassword" />
+              </div>
+
+              <input type="submit" value="Sign Up" />
+            </form>
+  
 
         </div>
       </div>
