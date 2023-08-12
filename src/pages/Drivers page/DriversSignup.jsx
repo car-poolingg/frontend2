@@ -38,10 +38,14 @@ const DriversLogin = () => {
               </div>
               <div className='InputFields'>
                 <label for="ConfirmPassword">Confirm Password</label>
-                <input type="password" name="ConfirmPassword" id="ConfirmPassword" />
+                <input className='Fields' type="password" name="ConfirmPassword" id="ConfirmPassword" />
               </div>
 
-              <input type="submit" value="Sign Up" />
+              <input className='SignUpBtn' type="submit" value="Sign Up" />
+
+              <div className='PrivacyFooter'>
+                <p>By signing up, you accept our <br /> <span><a href="TermsOfService">Terms of Service and Privacy Policy</a></span></p>
+              </div>
             </form>
   
 

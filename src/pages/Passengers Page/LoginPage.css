@@ -1,0 +1,212 @@
+@media (max-width: 500px) {
+    .login-page{
+        font-family: 'Rubik', sans-serif;
+        font-size: larger;
+    }
+
+    .login-page .textstyle{
+        font-size: 2.5rem;
+        line-height: normal;
+    }
+
+    .login-page .flex{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin-top: 3%;
+    }
+
+    .login-page .FormPage {
+        margin-top: -8%;
+    }
+    
+    .login-page .text {
+        color: #0C3EAD;
+        font-family: Rubik;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 45px;
+    }
+
+    .login-page .text2 {
+        color: #CFDDFC;
+        font-family: Rubik;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 45px;
+    }
+
+    .login-page .google-button-container {
+        text-align: center;
+      }
+      
+      .login-page .google-button {
+        display: inline-flex;
+        align-items: center;
+        background-color: #fff;
+        width: 100%;
+        color: #0C3EAD;
+        border: 1.5px solid #0C3EAD;
+        padding: 12px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      
+      .login-page .googletext {
+        color: #0C3EAD;
+        font-family: Rubik;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        margin: 0;
+      }
+
+      .login-page .google-button:hover {
+        background-color: #f0f0f0;
+      }
+      
+      .login-page .google-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 50px;
+      }
+
+      .login-page .divider-container {
+        display: flex;
+        align-items: center;
+        height: 24px;
+        margin-top: 4%;
+      }
+      
+      .login-page .divider-line {
+        flex-grow: 1;
+        height: 1.5px;
+        background-color: #0C3EAD;
+      }
+      
+      .login-page .divider-text {
+        margin: 0 10px;
+        font-weight: bold;
+        font-size: 16px;
+        color: #0C3EAD;
+      }
+
+      .login-page .email {
+        display: flex;
+        width: 100%;
+        /* height: 41px; */
+        padding: 6px 64px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.51);
+        background: #E2EBFD;
+        outline: none;
+      }
+
+      .login-page .InputFields {
+        margin: 0;
+    }
+
+    .login-page .labelemail {
+        color: #0C3EAD;
+        font-family: Rubik;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        margin-top: 10px;
+    }
+
+    .login-page .labelpass {
+        color: #0C3EAD;
+        font-family: Rubik;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        margin-top: 5px;
+    }
+
+    .login-page .text4 {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .login-page .remember {
+        margin-left: 5px;
+        color: rgba(0, 0, 0, 0.51);
+        font-family: Rubik;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 500;
+        /* line-height: 24px;  */
+    }
+
+    .login-page .checkrem {
+        display: flex;
+        align-items: center;
+    }
+
+    .login-page .forgotten {
+        color: rgba(0, 0, 0, 0.51);
+        font-family: Rubik;
+        font-size: 11px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        margin: 0;
+        
+    }
+
+    .login-page .LoginBtn {
+        display: flex;
+        width: 100%;
+        /* height: 41px; */
+        padding: 6px 64px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.00);
+        background: #0C3EAD;
+        color: #fff;
+        color: #E2EBFD;
+        font-family: Rubik;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+    }
+
+    .login-page .PrivacyFooter {
+        margin-top: 40%;
+    }
+
+    .login-page .account {
+        color: rgba(0, 0, 0, 0.51);
+        text-align: center;
+        font-family: Rubik;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+    }
+
+    .login-page .signup {
+        color: #0C3EAD;
+        font-family: Rubik;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+    }
+}
