@@ -63,19 +63,17 @@ import PasswordInput from "../../components/Password/Password"
                 </div>
                 {/* <RememberMeButton/> */}
                 <input className='LoginBtn' type="submit" value="Sign Up" />
-
+                </form>
                 <div className='text4'>
                     <div className='checkrem'>
                         <input type="text" type="checkbox" className='check' /><span className='remember'>I agree to the <span className='Terms'>Terms & Conditions</span></span>
                     </div>
                     {/* <a href='' className='forgotten'>Forgotten Password?</a> */}
                 </div>
-
                 <div className='PrivacyFooter'>
                     {/* <p>By signing up, you accept our <br /> <span><a href="TermsOfService">Terms of Service and Privacy Policy</a></span></p> */}
                     <p className='account'>Already a user? <span><a href="" className='signup'>Log in</a></span></p>
                 </div>
-                </form>
             </div>
         </div>
     </div>

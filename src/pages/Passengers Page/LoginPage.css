@@ -1,15 +1,15 @@
 @media (max-width: 500px) {
-    .login-page{
+    .Login-page{
         font-family: 'Rubik', sans-serif;
         font-size: larger;
     }
 
-    .login-page .textstyle{
+    .Login-page .textstyle{
         font-size: 2.5rem;
         line-height: normal;
     }
 
-    .login-page .flex{
+    .Login-page .flex{
         width: 100%;
         display: flex;
         justify-content: center;
@@ -17,11 +17,11 @@
         margin-top: 3%;
     }
 
-    .login-page .FormPage {
+    .Login-page .FormPage {
         margin-top: -8%;
     }
     
-    .login-page .text {
+    .Login-page .text {
         color: #0C3EAD;
         font-family: Rubik;
         font-size: 32px;
@@ -30,7 +30,7 @@
         line-height: 45px;
     }
 
-    .login-page .text2 {
+    .Login-page .text2 {
         color: #CFDDFC;
         font-family: Rubik;
         font-size: 32px;
@@ -39,11 +39,11 @@
         line-height: 45px;
     }
 
-    .login-page .google-button-container {
+    .Login-page .google-button-container {
         text-align: center;
       }
       
-      .login-page .google-button {
+      .Login-page .google-button {
         display: inline-flex;
         align-items: center;
         background-color: #fff;
@@ -56,7 +56,7 @@
         transition: background-color 0.3s ease;
       }
       
-      .login-page .googletext {
+      .Login-page .googletext {
         color: #0C3EAD;
         font-family: Rubik;
         font-size: 14px;
@@ -66,11 +66,11 @@
         margin: 0;
       }
 
-      .login-page .google-button:hover {
+      .Login-page .google-button:hover {
         background-color: #f0f0f0;
       }
       
-      .login-page .google-icon {
+      .Login-page .google-icon {
         width: 20px;
         height: 20px;
         margin-right: 50px;
@@ -83,20 +83,20 @@
         margin-top: 4%;
       }
       
-      .login-page .divider-line {
+      .Login-page .divider-line {
         flex-grow: 1;
         height: 1.5px;
         background-color: #0C3EAD;
       }
       
-      .login-page .divider-text {
+      .Login-page .divider-text {
         margin: 0 10px;
         font-weight: bold;
         font-size: 16px;
         color: #0C3EAD;
       }
 
-      .login-page .email {
+      .Login-page .email {
         display: flex;
         width: 100%;
         /* height: 41px; */
@@ -111,11 +111,11 @@
         outline: none;
       }
 
-      .login-page .InputFields {
+      .Login-page .InputFields {
         margin: 0;
     }
 
-    .login-page .labelemail {
+    .Login-page .labelemail {
         color: #0C3EAD;
         font-family: Rubik;
         font-size: 14px;
@@ -125,7 +125,7 @@
         margin-top: 10px;
     }
 
-    .login-page .labelpass {
+    .Login-page .labelpass {
         color: #0C3EAD;
         font-family: Rubik;
         font-size: 14px;
@@ -135,12 +135,12 @@
         margin-top: 5px;
     }
 
-    .login-page .text4 {
+    .Login-page .text4 {
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
-    .login-page .remember {
+    .Login-page .remember {
         margin-left: 5px;
         color: rgba(0, 0, 0, 0.51);
         font-family: Rubik;
@@ -150,12 +150,12 @@
         /* line-height: 24px;  */
     }
 
-    .login-page .checkrem {
+    .Login-page .checkrem {
         display: flex;
         align-items: center;
     }
 
-    .login-page .forgotten {
+    .Login-page .forgotten {
         color: rgba(0, 0, 0, 0.51);
         font-family: Rubik;
         font-size: 11px;
@@ -166,7 +166,7 @@
         
     }
 
-    .login-page .LoginBtn {
+    .Login-page .LoginBtn {
         display: flex;
         width: 100%;
         /* height: 41px; */
@@ -187,11 +187,11 @@
         line-height: 24px;
     }
 
-    .login-page .PrivacyFooter {
+    .Login-page .PrivacyFooter {
         margin-top: 40%;
     }
 
-    .login-page .account {
+    .Login-page .account {
         color: rgba(0, 0, 0, 0.51);
         text-align: center;
         font-family: Rubik;
@@ -201,7 +201,7 @@
         line-height: 24px;
     }
 
-    .login-page .signup {
+    .Login-page .signup {
         color: #0C3EAD;
         font-family: Rubik;
         font-size: 12px;
