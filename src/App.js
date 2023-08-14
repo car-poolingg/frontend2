@@ -6,6 +6,8 @@ import DriversSignup from "./pages/Drivers page/DriversSignup";
 import LoginPage from "./pages/Passengers Page/LoginPage";
 import SignUpPage from "./pages/Passengers Sign Up Page/SignUp";
 import ForgottenPassword from "./pages/ForgottenPassword/ForgottenPassword";
+import AboutScreen from "./pages/AboutScreen/AboutScreen";
+import NewPass from "./pages/NewPassword/NewPassword";
 import PersonalDetails from "./pages/Drivers page/PersonalDetails";
 import Document from "./pages/Drivers page/Document";
 import License from "./pages/Drivers page/License";
@@ -14,6 +16,7 @@ import DriversProfile from "./pages/Drivers page/DriversProfile";
 import ForgotPassword from "./pages/Drivers page/ForgotPassword";
 import VerifyPassword from "./pages/Drivers page/VerifyPassword";
 import NewPassword from "./pages/Drivers page/NewPassword";
+import EditProfile from "./pages/Drivers page/EditProfile";
 import AvailableDrivers from "./pages/Passengers/AvailableDrivers";
 
 function App() {
@@ -30,6 +33,8 @@ function App() {
         path='/forgotten-password'
         element={<ForgottenPassword />}
       />
+      <Route path='/about' element={<AboutScreen />} />
+      <Route path='/new-password' element={<NewPass />} />
       <Route
         path='/PersonalDetails'
         element={<PersonalDetails />}
@@ -52,6 +57,10 @@ function App() {
       <Route
         path='/NewPassword'
         element={<NewPassword />}
+      />
+      <Route
+        path='/EditProfile'
+        element={<EditProfile />}
       />
       <Route
         path='/passengers'
