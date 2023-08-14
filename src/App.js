@@ -18,6 +18,8 @@ import VerifyPassword from "./pages/Drivers page/VerifyPassword";
 import NewPassword from "./pages/Drivers page/NewPassword";
 import EditProfile from "./pages/Drivers page/EditProfile";
 import AvailableDrivers from "./pages/Passengers/AvailableDrivers";
+import Profile from "./pages/Passengers/Profile";
+import PassengerHome from "./pages/Passengers/Home";
 
 function App() {
   return (
@@ -63,13 +65,9 @@ function App() {
         element={<EditProfile />}
       />
       <Route
-        path='/passengers'
-        element={<AvailableDrivers />}>
-        <Route
-          path='availableDrivers'
-          element={<AvailableDrivers />}
-        />
-      </Route>
+        path='/passengers/*'
+        element={<PassengerHome />}
+      />
     </Routes>
   );
 }

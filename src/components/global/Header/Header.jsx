@@ -3,11 +3,14 @@ import React from "react";
 import "./Header.css";
 import { useNavigate } from "react-router-dom";
 
-function Header({ title }) {
+function Header({ title, extend }) {
   const navigate = useNavigate();
   return (
-    <div>
-      <div className='NavTop'>
+    <>
+      <div
+        className={`NavTop-header ${
+          extend ? "pb-nav " : "header-h"
+        }`}>
         <button
           className='iconEllipse'
           onClick={() => navigate(-1)}>
@@ -20,7 +23,7 @@ function Header({ title }) {
         </button>
         <h6 className='DetailsNavTopText'>{title}</h6>
       </div>
-    </div>
+    </>
   );
 }
 
