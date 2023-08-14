@@ -2,7 +2,7 @@ import React from 'react'
 import './NewPassword.css'
 import PasswordInput from "../../components/Password/Password"
 
-const NewPassword = () => {
+const Newpass = () => {
   return (
     <div className='NewPassword'>
         <div className='BlueContainer'>
@@ -38,4 +38,4 @@ const NewPassword = () => {
   )
 }
 
-export default NewPassword
+export default Newpass
