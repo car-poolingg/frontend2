@@ -14,6 +14,7 @@ import DriversProfile from "./pages/Drivers page/DriversProfile";
 import ForgotPassword from "./pages/Drivers page/ForgotPassword";
 import VerifyPassword from "./pages/Drivers page/VerifyPassword";
 import NewPassword from "./pages/Drivers page/NewPassword";
+import AvailableDrivers from "./pages/Passengers/AvailableDrivers";
 
 function App() {
   return (
@@ -52,6 +53,14 @@ function App() {
         path='/NewPassword'
         element={<NewPassword />}
       />
+      <Route
+        path='/passengers'
+        element={<AvailableDrivers />}>
+        <Route
+          path='availableDrivers'
+          element={<AvailableDrivers />}
+        />
+      </Route>
     </Routes>
   );
 }
