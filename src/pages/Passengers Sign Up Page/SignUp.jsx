@@ -66,7 +66,7 @@ import PasswordInput from "../../components/Password/Password"
                 </form>
                 <div className='text4'>
                     <div className='checkrem'>
-                        <input type="text" type="checkbox" className='check' /><span className='remember'>I agree to the <span className='Terms'>Terms & Conditions</span></span>
+                        <input type="checkbox" className='check' /><span className='remember'>I agree to the <span className='Terms'>Terms & Conditions</span></span>
                     </div>
                     {/* <a href='' className='forgotten'>Forgotten Password?</a> */}
                 </div>
