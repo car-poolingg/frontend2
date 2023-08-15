@@ -16,6 +16,7 @@ import DriversProfile from "./pages/Drivers page/DriversProfile";
 import ForgotPassword from "./pages/Drivers page/ForgotPassword";
 import VerifyPassword from "./pages/Drivers page/VerifyPassword";
 import NewPassword from "./pages/Drivers page/NewPassword";
+import VerificationInput from "./pages/OTPVerification/OTPVerification";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
       <Route path='/ForgotPassword' element={<ForgotPassword/>}/>
       <Route path='/VerifyPassword' element={<VerifyPassword/>}/>
       <Route path='/NewPassword' element={<NewPassword/>}/>
+      <Route path='/verifycode' element={<VerificationInput/>}/>
     </Routes>
    
   );
