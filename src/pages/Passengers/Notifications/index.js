@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../../../components/global/Header/Header";
 import "./Notifications.css";
-import { Card } from "react-bootstrap";
 import NotificationCard from "../../../components/passengers/NotificationCard";
 
 function Notifications() {
