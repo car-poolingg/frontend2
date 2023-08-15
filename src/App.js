@@ -21,6 +21,8 @@ import EditProfile from "./pages/Drivers page/EditProfile";
 import AvailableDrivers from "./pages/Passengers/AvailableDrivers";
 import Profile from "./pages/Passengers/Profile";
 import PassengerHome from "./pages/Passengers/Home";
+import ProfilePage from "./pages/Drivers page/ProfilePage";
+
 
 function App() {
   return (
@@ -39,14 +41,44 @@ function App() {
       <Route path='/DriversProfile' element={<DriversProfile />} />
       <Route path='/ForgotPassword' element={<ForgotPassword />} />
       <Route path='/VerifyPassword' element={<VerifyPassword />} />
+      <Route path='/ProfilePage' element={<ProfilePage />} />
       <Route path='/NewPassword' element={<NewPassword />}  />
       <Route path='/EditProfile' element={<EditProfile />} />
       <Route path='/passengers/*'element={<PassengerHome />}  />
       <Route path='/AvailableDrivers' element={<AvailableDrivers />} />
-      <Route path='/VerificationInput' element={<Profile />} />
-      <Route path='/Profile' element={<EditProfile />} />
+      <Route path='/verifycode' element={<VerificationInput />} />
+      <Route path='/Profile' element={<Profile />} />
+      <Route
+        path='/DriversProfile'
+        element={<DriversProfile />}
+      />
+      <Route
+        path='/verifycode'
+        element={<VerificationInput />}
+      />
+      <Route
+        path='/ForgotPassword'
+        element={<ForgotPassword />}
+      />
+      <Route
+        path='/VerifyPassword'
+        element={<VerifyPassword />}
+      />
+      <Route
+        path='/NewPassword'
+        element={<NewPassword />}
+      />
+      <Route
+        path='/EditProfile'
+        element={<EditProfile />}
+      />
+      <Route
+        path='/passengers/*'
+        element={<PassengerHome />}
+      />
     </Routes>
-  );
+  
+);
 }
 
 export default App;
