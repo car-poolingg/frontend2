@@ -1,11 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
+import { Icon } from "@iconify/react";
 import "../../bootstrap.min.css";
 import "./SignUp.css";
 import NavBar from "../../components/Nav/Nav";
 import PasswordInput from "../../components/Password/Password";
+import { boolAnyEmptyInList } from "../../utils/validators";
+import axiosInstance from "../../utils/request";
+import { useNavigate } from "react-router-dom";
 // import RememberMeButton from '../../components/RemeberMe/RememberMe';
 
 const SignUpPage = () => {
+  const navigate = useNavigate();
+
+  // Damn a state manager??
+  const [signUpState, setSignUpState] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    phone: "",
+    password: "",
+    confirmPassword: "",
+  });
+
+  const validateForm = () => {
+    // check if all are defined
+    const { password, confirmPassword } = signUpState;
+
+    if (boolAnyEmptyInList(Object.values(signUpState)))
+      throw new Error("Please fill all details");
+    if (password !== confirmPassword)
+      throw new Error("Password not consistent");
+
+    return signUpState;
+  };
+
+  const handleUserRegistration = async (eventObj) => {
+    eventObj.preventDefault();
+    try {
+      // first validate the form data
+      const validData = validateForm();
+      // form valid, proceed
+      const response = await axiosInstance.post(
+        "/auth/register",
+        {
+          firstName: validData.firstname,
+          lastName: validData.lastname,
+          email: validData.email,
+          phone: validData.phone,
+          password: validData.password,
+        }
+      );
+      // register successful, proceed
+      alert(JSON.stringify(response.data.msg));
+      navigate("/VerifyPassword");
+    } catch (errorRegistering) {
+      alert(errorRegistering.message);
+    }
+  };
+
+  // an input component will be better
+  const inputOption = {
+    onChange: (ev) =>
+      setSignUpState({
+        ...signUpState,
+        [ev.target.name]: ev.target.value,
+      }), // could set value from this option?:)
+  };
+
   return (
     <div className='SignUp-page'>
       <NavBar />
@@ -13,7 +74,7 @@ const SignUpPage = () => {
         <img
           className='CarImage'
           src='/Assets/car.png'
-          alt='Car'
+          alt='Car Image'
         />
       </div>
       <div className='FormPage'>
@@ -40,16 +101,17 @@ const SignUpPage = () => {
           <span class='divider-line'></span>
         </div>
         <div className='RegistrationInputs'>
-          <form action=''>
+          <form onSubmit={handleUserRegistration}>
             <div className='InputFields'>
               <label for='email' className='labelemail'>
                 First Name
               </label>
               <input
                 className='email'
-                type='email'
+                type='text'
                 id='email'
-                name='email'
+                name='firstname'
+                {...inputOption}
               />
             </div>
             <div className='InputFields'>
@@ -58,9 +120,10 @@ const SignUpPage = () => {
               </label>
               <input
                 className='email'
-                type='email'
+                type='text'
                 id='email'
-                name='email'
+                name='lastname'
+                {...inputOption}
               />
             </div>
             <div className='InputFields'>
@@ -72,6 +135,7 @@ const SignUpPage = () => {
                 type='email'
                 id='email'
                 name='email'
+                {...inputOption}
               />
             </div>
             {/* <div className='InputFields'>
@@ -84,9 +148,10 @@ const SignUpPage = () => {
               </label>
               <input
                 className='email'
-                type='email'
+                type='number'
                 id='email'
-                name='email'
+                name='phone'
+                {...inputOption}
               />
             </div>
 
@@ -94,21 +159,27 @@ const SignUpPage = () => {
               <label for='Password' className='labelpass'>
                 Password
               </label>
-              <PasswordInput />
+              <PasswordInput
+                value={signUpState["password"]}
+                {...inputOption}
+                name={"password"}
+              />
             </div>
 
             <div className='InputFields'>
               <label for='Password' className='labelpass'>
                 Confirm Password
               </label>
-              <PasswordInput />
+              <PasswordInput
+                value={signUpState["confirmPassword"]}
+                {...inputOption}
+                name='confirmPassword'
+              />
             </div>
             {/* <RememberMeButton/> */}
-            <input
-              className='LoginBtn'
-              type='submit'
-              value='Sign Up'
-            />
+            <button className='LoginBtn' type='submit'>
+              Sign Up
+            </button>
           </form>
           <div className='text4'>
             <div className='checkrem'>
