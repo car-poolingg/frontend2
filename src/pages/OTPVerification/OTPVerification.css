@@ -7,12 +7,6 @@
     overflow: scroll;
 }
 
-.code {
-  /* overflow: auto; */
-  /* height: calc(100vh - 50px); */
-
-}
-
 .code .BlueContainer {
   display: flex;
   width: 100%;

@@ -277,3 +277,17 @@ hr{
     line-height: 161.111%;
     margin-bottom: 0%;
 }
+
+
+/*eDIT Profile*/
+
+.DP{
+      width: 33.5%;
+    margin: 0 auto;
+}
+
+.CityState{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

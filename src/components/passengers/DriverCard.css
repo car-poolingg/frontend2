@@ -1,0 +1,21 @@
+.drivers-card {
+  box-shadow: 0px 2px 32px 0px rgba(119, 119, 119, 0.1);
+  border-radius: 5px;
+}
+.driver-card-container {
+  gap: 10px;
+  border-bottom: 2px solid #dee2e6 !important;
+}
+.driver-card-container p {
+  font-size: small;
+}
+.status {
+  color: #6b4700;
+  background-color: #ffeecd;
+  height: fit-content;
+  margin-left: 14px;
+  font-weight: 500;
+}
+.status-btn {
+  margin-left: 14px;
+}
