@@ -17,8 +17,7 @@ import ForgotPassword from "./pages/Drivers page/ForgotPassword";
 import VerifyPassword from "./pages/Drivers page/VerifyPassword";
 import NewPassword from "./pages/Drivers page/NewPassword";
 import EditProfile from "./pages/Drivers page/EditProfile";
-import AvailableDrivers from "./pages/Passengers/AvailableDrivers";
-import Profile from "./pages/Passengers/Profile";
+
 import PassengerHome from "./pages/Passengers/Home";
 
 function App() {

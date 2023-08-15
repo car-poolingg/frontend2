@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import AvailableDrivers from "../AvailableDrivers";
 import Profile from "../Profile";
+import Notifications from "../Notifications";
 
 function PassengerHome() {
   return (
@@ -11,6 +12,10 @@ function PassengerHome() {
         element={<AvailableDrivers />}
       />
       <Route path='profile' element={<Profile />} />
+      <Route
+        path='notifications'
+        element={<Notifications />}
+      />
     </Routes>
   );
 }
