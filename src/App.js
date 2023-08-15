@@ -16,8 +16,11 @@ import DriversProfile from "./pages/Drivers page/DriversProfile";
 import ForgotPassword from "./pages/Drivers page/ForgotPassword";
 import VerifyPassword from "./pages/Drivers page/VerifyPassword";
 import NewPassword from "./pages/Drivers page/NewPassword";
+import VerificationInput from "./pages/OTPVerification/OTPVerification";
 import EditProfile from "./pages/Drivers page/EditProfile";
 import AvailableDrivers from "./pages/Passengers/AvailableDrivers";
+import Profile from "./pages/Passengers/Profile";
+import PassengerHome from "./pages/Passengers/Home";
 
 function App() {
   return (
@@ -36,11 +39,12 @@ function App() {
       <Route path='/DriversProfile' element={<DriversProfile />} />
       <Route path='/ForgotPassword' element={<ForgotPassword />} />
       <Route path='/VerifyPassword' element={<VerifyPassword />} />
-      <Route path='/NewPassword' element={<NewPassword />} />
+      <Route path='/NewPassword' element={<NewPassword />}  />
       <Route path='/EditProfile' element={<EditProfile />} />
-      <Route path='/passengers'  element={<AvailableDrivers />} />
-      <Route path='/availableDrivers' element={<AvailableDrivers />} />
-      
+      <Route path='/passengers/*'element={<PassengerHome />}  />
+      <Route path='/AvailableDrivers' element={<AvailableDrivers />} />
+      <Route path='/VerificationInput' element={<Profile />} />
+      <Route path='/Profile' element={<EditProfile />} />
     </Routes>
   );
 }
