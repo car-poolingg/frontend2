@@ -23,53 +23,24 @@ function App() {
   return (
     <Routes>
       <Route path='/' element={<LandingPage />} />
-      <Route
-        path='/DriversSignup'
-        element={<DriversSignup />}
-      />
+      <Route path='/DriversSignup' element={<DriversSignup />} />
       <Route path='/Login' element={<LoginPage />} />
       <Route path='/SignUp' element={<SignUpPage />} />
-      <Route
-        path='/forgotten-password'
-        element={<ForgottenPassword />}
-      />
+      <Route path='/forgotten-password' element={<ForgottenPassword />}  />
       <Route path='/about' element={<AboutScreen />} />
       <Route path='/new-password' element={<NewPass />} />
-      <Route
-        path='/PersonalDetails'
-        element={<PersonalDetails />}
-      />
+      <Route path='/PersonalDetails' element={<PersonalDetails />} />
       <Route path='/Document' element={<Document />} />
       <Route path='/License' element={<License />} />
       <Route path='/Support' element={<Support />} />
-      <Route
-        path='/DriversProfile'
-        element={<DriversProfile />}
-      />
-      <Route
-        path='/ForgotPassword'
-        element={<ForgotPassword />}
-      />
-      <Route
-        path='/VerifyPassword'
-        element={<VerifyPassword />}
-      />
-      <Route
-        path='/NewPassword'
-        element={<NewPassword />}
-      />
-      <Route
-        path='/EditProfile'
-        element={<EditProfile />}
-      />
-      <Route
-        path='/passengers'
-        element={<AvailableDrivers />}>
-        <Route
-          path='availableDrivers'
-          element={<AvailableDrivers />}
-        />
-      </Route>
+      <Route path='/DriversProfile' element={<DriversProfile />} />
+      <Route path='/ForgotPassword' element={<ForgotPassword />} />
+      <Route path='/VerifyPassword' element={<VerifyPassword />} />
+      <Route path='/NewPassword' element={<NewPassword />} />
+      <Route path='/EditProfile' element={<EditProfile />} />
+      <Route path='/passengers'  element={<AvailableDrivers />} />
+      <Route path='/availableDrivers' element={<AvailableDrivers />} />
+      
     </Routes>
   );
 }

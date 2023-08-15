@@ -216,6 +216,7 @@ hr{
 
 .SupportContact{
     display: flex;
+    margin-top: 5%;
 }
 .SupportText{
     margin-left: 5%;
