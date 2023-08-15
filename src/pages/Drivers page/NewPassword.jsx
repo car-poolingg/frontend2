@@ -9,6 +9,7 @@ const NewPassword = () => {
   return (
     <div>
       <FileChooser/>
+
     </div>
   )
 }

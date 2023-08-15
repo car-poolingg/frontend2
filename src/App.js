@@ -22,6 +22,8 @@ import AvailableDrivers from "./pages/Passengers/AvailableDrivers";
 import Profile from "./pages/Passengers/Profile";
 import PassengerHome from "./pages/Passengers/Home";
 import ProfilePage from "./pages/Drivers page/ProfilePage";
+import RatePassenger from "./pages/Drivers page/RatePassenger";
+import RatingDriver from "./pages/Drivers page/RatingDriver";
 
 
 function App() {
@@ -47,6 +49,8 @@ function App() {
       <Route path='/passengers/*'element={<PassengerHome />}  />
       <Route path='/AvailableDrivers' element={<AvailableDrivers />} />
       <Route path='/verifycode' element={<VerificationInput />} />
+      <Route path='/RatePassenger' element={<RatePassenger />} />
+      <Route path='/RatingDriver' element={<RatingDriver />} />
       <Route path='/Profile' element={<Profile />} />
       <Route
         path='/DriversProfile'

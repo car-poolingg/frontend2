@@ -336,3 +336,8 @@ font-weight: 500;
 line-height: 120%; /* 24px */
 margin: 0 0 5%;
 }
+
+/*Drivers and Passenger Rating Page*/
+.DriversPassengerPage{
+    margin: 5% 7%;
+}
