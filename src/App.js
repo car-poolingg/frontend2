@@ -50,6 +50,10 @@ function App() {
         element={<DriversProfile />}
       />
       <Route
+        path='/verifycode'
+        element={<VerificationInput />}
+      />
+      <Route
         path='/ForgotPassword'
         element={<ForgotPassword />}
       />
@@ -70,7 +74,8 @@ function App() {
         element={<PassengerHome />}
       />
     </Routes>
-  );
+  
+);
 }
 
 export default App;
