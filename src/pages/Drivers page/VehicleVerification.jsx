@@ -4,16 +4,12 @@ import "../../bootstrap.min.css"
 // import './Styles.scss';
 import "./DriversPage.css";
 import FileChooser from '../../components/Upload/uploadfile';
+import Header from '../../components/global/Header/Header';
 
 const VehicleVerification = () => {
   return (
     <div>
-    <div className='NavTop'>
-<div className='iconEllipse'>
-<Icon icon="material-symbols:arrow-back" color="#0c3ead" height={"24px"} width={"24px"} />
-</div>
-<h6 className='DetailsNavTopText'>Verify your Vehicle</h6>
-</div>
+ <Header title={"Verify your Vehicle"} menuType = {true}/>
 
 <div className='DriversDetails'>
         <div className='DocumentUpload'>

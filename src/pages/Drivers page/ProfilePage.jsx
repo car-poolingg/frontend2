@@ -2,18 +2,14 @@ import React from 'react'
 import { Icon } from '@iconify/react';
 import "../../bootstrap.min.css"
 // import './Styles.scss';
+import Header from '../../components/global/Header/Header';
 import "./DriversPage.css"
 
 
 const ProfilePage = () => {
   return (
     <div>
-        <div className='NavTop'>
-     <div className='iconEllipse'>
-     <Icon icon="quill:hamburger" color="#0c3ead" height={"24px"} width={"24px"} />
-     </div>
-      <h6 className='DetailsNavTopText'>Passenger's Profile</h6>
-      </div>
+        <Header title={"Passenger's Profile"} menuType = {true}/>
 
       <div className='DriversDetails'>
         <div className='PictureText'>

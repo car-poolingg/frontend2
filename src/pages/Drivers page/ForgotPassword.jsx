@@ -2,17 +2,19 @@ import React from 'react'
 import { Icon } from '@iconify/react';
 import "../../bootstrap.min.css"
 // import './Styles.scss';
+import Header from '../../components/global/Header/Header';
 import "./DriversPage.css"
 
 
 const ForgotPassword = () => {
   return (
     <div>
-         <div className='NavTop'>
+         {/* <div className='NavTop'>
      <div className='iconEllipse'>
      <Icon icon="material-symbols:arrow-back" color="#0c3ead" height={"24px"} width={"24px"} />
      </div>
-      </div>
+      </div> */}
+      <Header title={""}/>
 
       <div className='FormPage'>
         <h3 className='ForgottenPasswordText'><b>Forgotten Password</b></h3>

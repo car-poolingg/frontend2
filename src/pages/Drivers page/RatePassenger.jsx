@@ -4,17 +4,13 @@ import { FaStar } from 'react-icons/fa';
 import "../../bootstrap.min.css"
 // import './Styles.scss';
 import "./DriversPage.css"
+import Header from '../../components/global/Header/Header';
 import RateDriver from '../../components/Rating/RateDriver';
 
 const RatePassenger = () => {
   return (
     <div>
-         <div className='NavTop'>
-     <div className='iconEllipse'>
-     <Icon icon="quill:hamburger" color="#0c3ead" height={"24px"} width={"24px"} />
-     </div>
-      <h6 className='DetailsNavTopText'>Rate Passenger</h6>
-      </div>
+       <Header title={"Rate Passenger"} menuType = {true}/>
       <div className='DriversPassengerPage'>
         <RateDriver />
 

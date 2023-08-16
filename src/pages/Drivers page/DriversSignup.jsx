@@ -3,16 +3,18 @@ import { Icon } from '@iconify/react';
 import "../../bootstrap.min.css"
 // import './Styles.scss';
 import "./DriversPage.css"
+import Header from '../../components/global/Header/Header';
 
 const DriversLogin = () => {
   return (
     <div>
-      <div className='NavTop'>
+      {/* <div className='NavTop'>
      <div className='iconEllipse'>
      <Icon icon="material-symbols:arrow-back" color="#0c3ead" height={"24px"} width={"24px"} />
      </div>
       <h6 className='NavTopText' style={{marginBottom: "0px"}}>Drive with Tag</h6>
-      </div>
+      </div> */}
+      <Header title={"Drive with Tag"}/>
 
       
       <div className='FormPage'>
