@@ -33,12 +33,28 @@ const VerifyPassword = () => {
           token: token.join("")
         }
       )
-      // register successful, proceed
+      // verify successful, proceed
       alert(JSON.stringify(response.data.msg))
       storeData(StorageConstants.Email, userEmail)
       navigate('/Profile')
     } catch (errorVerifying) {
       logAxiosResponse(errorVerifying)
+    }
+  }
+
+  const handleResendToken = async () => {
+    try {
+      const response = await axiosInstance.post(
+        "/auth/resend-email",
+        {
+          email: userEmail,
+        }
+      )
+
+      // token retrieval successful, proceed
+      alert(JSON.stringify(response.data.msg))
+    } catch (errorRetrievingToken) {
+      logAxiosResponse(errorRetrievingToken)
     }
   }
 
@@ -68,7 +84,7 @@ const VerifyPassword = () => {
 
         </div>
         <div>
-          <p className='OTP' onClick={() => console.log('Mail not saved')} >Resend OTP?</p>
+          <p className='OTP' onClick={() => handleResendToken()} >Resend OTP?</p>
           <input className='SignUpBtn' onClick={() => handleVerify()} type='button' value="Confirm Code" style={{ marginTop: '3%' }} />
         </div>
       </div>

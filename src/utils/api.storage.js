@@ -2,13 +2,14 @@
 function responseFormat(status, data) {
     return {
         message: status,
-        data: data
+        data: data,
+        success: status == "Success"
     }
 }
 
 export function storeData(key, value) {
     localStorage.setItem(key, JSON.stringify(value))
-    return [key, value]
+    return responseFormat(value)
 }
 
 export function getData(key) {
