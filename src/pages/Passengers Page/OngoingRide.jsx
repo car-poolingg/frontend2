@@ -1,8 +1,9 @@
 import React from 'react'
 import "./LoginPage.css"
 import Header from '../../components/global/Header/Header'
+import { Icon } from '@iconify/react';
 
-const OngoingRide = () => {
+const Ongoing = () => {
   return (
     <div className='OngoingRide'>
         <Header title={"ongoingride"} menuType={true}/>
@@ -14,8 +15,8 @@ const OngoingRide = () => {
                     <p className='text'>James Onigidi</p>
                 </div>
                 <div>
-                    <img src="/Assets/Ellipse23.svg" alt="" />
-                    <img src="/Assets/Maskgroup.svg" alt="" />
+                    <Icon icon="material-symbols:cancel" color="red" width="30" height="30" />
+                    <Icon icon="fluent:checkmark-circle-12-filled" color="blue" width="30" height="30" />
                 </div>
             </div>
             <div class="line"></div>
@@ -36,4 +37,4 @@ const OngoingRide = () => {
   )
 }
 
-export default OngoingRide
+export default Ongoing

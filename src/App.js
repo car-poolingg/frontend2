@@ -31,6 +31,7 @@ import ProfilePage from "./pages/Drivers page/ProfilePage";
 import RatePassenger from "./pages/Drivers page/RatePassenger";
 import RatingDriver from "./pages/Drivers page/RatingDriver";
 import AvailableDrivers from "./pages/Passengers/AvailableDrivers";
+import Ongoing from "./pages/Passengers Page/OngoingRide";
 
 
 function App() {
@@ -148,6 +149,7 @@ function App() {
       <Route path="/ongoing-ride" element={<OngoingRide/>}/>
       <Route path="/drivprofile-page" element={<DrivProfilepage/>}/>
       <Route path="/change-password" element={<Changepass/>}/>
+      <Route path="/Ongoing" element={<Ongoing/>}/>
       {/* blame: @xpanvictor. can make a page later */}
       <Route
         path="*"
