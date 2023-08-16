@@ -216,6 +216,7 @@ hr{
 
 .SupportContact{
     display: flex;
+    margin-top: 5%;
 }
 .SupportText{
     margin-left: 5%;
@@ -290,4 +291,114 @@ hr{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+
+/*Passenger Profile page*/
+
+.PictureText{
+    margin-top: 5%;
+}
+.ProfileText{
+    color: var(--text-grey, #8A8894);
+font-family: Rubik;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px; /* 157.143% */
+margin: 3% 0;
+}
+.PassengerPic{
+    width: 100%;
+}
+.RatingStyle{
+    display: flex;
+    flex-direction: row;
+}
+.HeadingInfo{
+    color: var(--text-black, #212121);
+font-family: Rubik;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 120%; /* 24px */
+margin-bottom: 7%;
+}
+.PassengerInfo{
+    margin: 7% 0;
+}
+.RatingText{
+    color: var(--text-black, #212121);
+font-family: Rubik;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 120%; /* 24px */
+margin: 0 0 5%;
+}
+
+/*Drivers and Passenger Rating Page*/
+.DriversPassengerPage{
+    margin: 5% 7%;
+}
+
+/*Identity Page*/
+.IdentityText{
+    color: rgba(0, 0, 0, 0.51);
+font-family: Rubik;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px; /* 157.143% */
+}
+
+/*ONGOING RIDE*/
+
+.Destination{
+    display: flex;
+width: 100%;
+padding: 5% 3%;
+justify-content: center;
+align-items: center;
+gap: 10px;
+background-color: #CFDEFF;
+color: #072566;
+margin: 7% 0;
+}
+
+.DestinationText{
+    color: #072566;
+font-family: Rubik;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: 120%; /* 19.2px */
+margin: 0;
+
+}
+
+.PassengerNumber{
+    margin: 10% 0 35%;
+}
+.ExclaimationImage{
+    width: 171px;
+    height: 170px;
+    flex-shrink: 0;
+    margin: 10% 25% 10% 25%;
+}
+.PassengerHeader{
+    color: var(--text-black, #212121);
+font-family: Rubik;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 120%; /* 24px */
+}
+.PassengerSubText{
+    color: var(--text-black, #212121);
+font-family: Rubik;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px; /* 155.556% */
 }

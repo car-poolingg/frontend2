@@ -50,6 +50,7 @@ function Header({ title, extend, menuType }) {
             }
             name={"Notification"}
             notification={true}
+            link={"/passengers/notifications"}
           />
           <Accordion
             className='accordion-menu-option'
@@ -69,8 +70,14 @@ function Header({ title, extend, menuType }) {
                 />
               </Accordion.Header>
               <Accordion.Body>
-                <MenuOption name={"Find a ride"} />
-                <MenuOption name={"Ongoing ride"} />
+                <MenuOption
+                  name={"Find a ride"}
+                  link={"/passengers/findRide"}
+                />
+                <MenuOption
+                  name={"Ongoing ride"}
+                  link={"/passengers/ongoingRides"}
+                />
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>

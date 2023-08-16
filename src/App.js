@@ -10,23 +10,28 @@ import AboutScreen from "./pages/AboutScreen/AboutScreen";
 import NewPass from "./pages/NewPassword/NewPassword";
 import PersonalDetails from "./pages/Drivers page/PersonalDetails";
 import Document from "./pages/Drivers page/Document";
+import IdentityVerification from "./pages/Drivers page/IdentityVerification";
+import VehicleVerification from "./pages/Drivers page/VehicleVerification";
 import License from "./pages/Drivers page/License";
 import Support from "./pages/Drivers page/Support";
 import DriversProfile from "./pages/Drivers page/DriversProfile";
 import ForgotPassword from "./pages/Drivers page/ForgotPassword";
 import VerifyPassword from "./pages/Drivers page/VerifyPassword";
-import NewPassword from "./pages/Drivers page/NewPassword";
 import VerificationInput from "./pages/OTPVerification/OTPVerification";
 import EditProfile from "./pages/Drivers page/EditProfile";
-import AvailableDrivers from "./pages/Passengers/AvailableDrivers";
+import OngoingRide from "./pages/Drivers page/OngoingRide"
 import Profile from "./pages/Passengers/Profile";
 import PassengerHome from "./pages/Passengers/Home";
 import AdminLoginPage from "./pages/Admin/AdminLogin"
 import AdminForgottenPassword from "./pages/Admin/AdminForgottenPassword"
 import AdminNewpass from "./pages/Admin/AdminNewPassword"
-import OngoingRide from "./pages/Passengers Page/OngoingRide"
 import DrivProfilepage from "./pages/Passengers Page/DrivProfilepage"
 import Changepass from "./pages/NewPassword/changepassword";
+import ProfilePage from "./pages/Drivers page/ProfilePage";
+import RatePassenger from "./pages/Drivers page/RatePassenger";
+import RatingDriver from "./pages/Drivers page/RatingDriver";
+import AvailableDrivers from "./pages/Passengers/AvailableDrivers";
+
 
 function App() {
   return (
@@ -49,9 +54,23 @@ function App() {
         element={<PersonalDetails />}
       />
       <Route path='/Document' element={<Document />} />
+      <Route path='/IdentityVerification' element={<IdentityVerification />} />
+      <Route path='/VehicleVerification' element={<VehicleVerification />} />
       <Route path='/License' element={<License />} />
       <Route path='/Support' element={<Support />} />
-      <Route
+      <Route path='/DriversProfile' element={<DriversProfile />} />
+      <Route path='/ForgotPassword' element={<ForgotPassword />} />
+      <Route path='/VerifyPassword' element={<VerifyPassword />} />
+      <Route path='/ProfilePage' element={<ProfilePage />} />
+      <Route path='/EditProfile' element={<EditProfile />} />
+      <Route path='/passengers/*'element={<PassengerHome />}  />
+      <Route path='/AvailableDrivers' element={<AvailableDrivers />} />
+      <Route path = '/OngoingRide' element={<OngoingRide/>} />
+      <Route path='/verifycode' element={<VerificationInput />} />
+      <Route path='/RatePassenger' element={<RatePassenger />} />
+      <Route path='/RatingDriver' element={<RatingDriver />} />
+      <Route path='/Profile' element={<Profile />} />
+          <Route
         path='/DriversProfile'
         element={<DriversProfile />}
       />
@@ -67,10 +86,7 @@ function App() {
         path='/VerifyPassword'
         element={<VerifyPassword />}
       />
-      <Route
-        path='/NewPassword'
-        element={<NewPassword />}
-      />
+      
       <Route
         path='/EditProfile'
         element={<EditProfile />}
@@ -86,8 +102,7 @@ function App() {
       <Route path="/drivprofile-page" element={<DrivProfilepage/>}/>
       <Route path="/change-password" element={<Changepass/>}/>
     </Routes>
-  
-);
+  );
 }
 
 export default App;
