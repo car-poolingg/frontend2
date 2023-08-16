@@ -58,7 +58,7 @@ function App() {
         element={<ForgotPassword />}
       />
       <Route
-        path='/VerifyPassword'
+        path='/VerifyPassword/:email'
         element={<VerifyPassword />}
       />
       <Route

@@ -5,7 +5,7 @@ import "./SignUp.css";
 import NavBar from "../../components/Nav/Nav";
 import PasswordInput from "../../components/Password/Password";
 import { boolAnyEmptyInList } from "../../utils/validators";
-import axiosInstance from "../../utils/request";
+import axiosInstance, { logAxiosResponse } from "../../utils/request";
 import { useNavigate } from "react-router-dom";
 // import RememberMeButton from '../../components/RemeberMe/RememberMe';
 
@@ -52,10 +52,12 @@ const SignUpPage = () => {
             )
             // register successful, proceed
             alert(JSON.stringify(response.data.msg))
-            navigate("/VerifyPassword")
+            navigate(
+                `/VerifyPassword/${validData.email}`,
+            )
 
         } catch (errorRegistering) {
-            alert(errorRegistering.message)
+            logAxiosResponse(errorRegistering)
         };
     };
 
