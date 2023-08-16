@@ -283,8 +283,8 @@ const HomeScreen = () => {
   const [mapLocation, setMapLocation] = useState([
     9.082, 8.6753,
   ]);
-  const callBackMethod = () => {
-    console.log("Callback method");
+  const callBackMethod = (e) => {
+    console.log("Callback method", e);
   };
   const [infoboxes, setInfoboxes] = useState([
     {
@@ -372,6 +372,8 @@ const HomeScreen = () => {
   };
 
   const handleMapClick = (e) => {
+    const clickedLocation = e.location;
+    console.log(clickedLocation);
     setMapLocation([
       e.latitude.toFixed(4),
       e.longitude.toFixed(4),
