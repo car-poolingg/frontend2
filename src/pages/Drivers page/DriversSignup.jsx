@@ -70,14 +70,7 @@ const DriversLogin = () => {
 
   return (
     <div>
-// <<<<<<< dev
-//       <div className='NavTop'>
-//         <div className='iconEllipse'>
-//           <Icon icon="material-symbols:arrow-back" color="#0c3ead" height={"24px"} width={"24px"} />
-//         </div>
-//         <h6 className='NavTopText' style={{ marginBottom: "0px" }}>Drive with Tag</h6>
-//       </div>
-// =======
+
       {/* <div className='NavTop'>
      <div className='iconEllipse'>
      <Icon icon="material-symbols:arrow-back" color="#0c3ead" height={"24px"} width={"24px"} />

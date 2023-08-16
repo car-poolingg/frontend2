@@ -70,10 +70,10 @@ function App() {
         path='/ProfilePage'
         element={<ProfilePage />}
       />
-      <Route
+      {/* <Route
         path='/NewPassword'
         element={<NewPassword />}
-      />
+      /> */}
       <Route
         path='/EditProfile'
         element={<EditProfile />}
@@ -98,8 +98,9 @@ function App() {
         path='/RatingDriver'
         element={<RatingDriver />}
       />
-// =======
-//       <Route path='/DriversProfile' element={<DriversProfile />} />
+      <Route path='/OngoingRide' element={<OngoingRide />} />
+
+      {/* //       <Route path='/DriversProfile' element={<DriversProfile />} />
 //       <Route path='/ForgotPassword' element={<ForgotPassword />} />
 //       <Route path='/VerifyPassword' element={<VerifyPassword />} />
 //       <Route path='/ProfilePage' element={<ProfilePage />} />
@@ -109,10 +110,10 @@ function App() {
 //       <Route path = '/OngoingRide' element={<OngoingRide/>} />
 //       <Route path='/verifycode' element={<VerificationInput />} />
 //       <Route path='/RatePassenger' element={<RatePassenger />} />
-//       <Route path='/RatingDriver' element={<RatingDriver />} />
-// >>>>>>> main
+//       <Route path='/RatingDriver' element={<RatingDriver />} /> */}
+
       <Route path='/Profile' element={<Profile />} />
-          <Route
+      <Route
         path='/DriversProfile'
         element={<DriversProfile />}
       />
@@ -128,7 +129,7 @@ function App() {
         path='/VerifyPassword'
         element={<VerifyPassword />}
       />
-      
+
       <Route
         path='/EditProfile'
         element={<EditProfile />}
