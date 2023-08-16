@@ -6,8 +6,10 @@ import "../../bootstrap.min.css"
 import "./DriversPage.css"
 import { boolAnyEmptyInList } from '../../utils/validators';
 import axiosInstance, { logAxiosResponse } from '../../utils/request';
+import Header from '../../components/global/Header/Header';
 
 // @LightsidEsys the file pickers not working
+
 
 const DriversLogin = () => {
   const navigate = useNavigate()
@@ -68,12 +70,21 @@ const DriversLogin = () => {
 
   return (
     <div>
-      <div className='NavTop'>
-        <div className='iconEllipse'>
-          <Icon icon="material-symbols:arrow-back" color="#0c3ead" height={"24px"} width={"24px"} />
-        </div>
-        <h6 className='NavTopText' style={{ marginBottom: "0px" }}>Drive with Tag</h6>
-      </div>
+// <<<<<<< dev
+//       <div className='NavTop'>
+//         <div className='iconEllipse'>
+//           <Icon icon="material-symbols:arrow-back" color="#0c3ead" height={"24px"} width={"24px"} />
+//         </div>
+//         <h6 className='NavTopText' style={{ marginBottom: "0px" }}>Drive with Tag</h6>
+//       </div>
+// =======
+      {/* <div className='NavTop'>
+     <div className='iconEllipse'>
+     <Icon icon="material-symbols:arrow-back" color="#0c3ead" height={"24px"} width={"24px"} />
+     </div>
+      <h6 className='NavTopText' style={{marginBottom: "0px"}}>Drive with Tag</h6>
+      </div> */}
+      <Header title={"Drive with Tag"}/>
 
 
       <div className='FormPage'>
