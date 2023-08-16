@@ -1,8 +1,6 @@
 import React from "react";
 import Header from "../../../components/global/Header/Header";
 import "./profile.css";
-import ProfilePicture from "../../../components/ProfilePicture/ProfilePicture";
-import { Icon } from "@iconify/react";
 import SettingOption from "../../../components/global/SettingOption";
 import { useNavigate } from "react-router-dom";
 

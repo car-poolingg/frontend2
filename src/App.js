@@ -26,20 +26,30 @@ import PassengerHome from "./pages/Passengers/Home";
 import ProfilePage from "./pages/Drivers page/ProfilePage";
 import RatePassenger from "./pages/Drivers page/RatePassenger";
 import RatingDriver from "./pages/Drivers page/RatingDriver";
-
+import AvailableDrivers from "./pages/Passengers/AvailableDrivers";
+import Profile from "./pages/Passengers/Profile";
 
 
 function App() {
   return (
     <Routes>
       <Route path='/' element={<LandingPage />} />
-      <Route path='/DriversSignup' element={<DriversSignup />} />
+      <Route
+        path='/DriversSignup'
+        element={<DriversSignup />}
+      />
       <Route path='/Login' element={<LoginPage />} />
       <Route path='/SignUp' element={<SignUpPage />} />
-      <Route path='/forgotten-password' element={<ForgottenPassword />}  />
+      <Route
+        path='/forgotten-password'
+        element={<ForgottenPassword />}
+      />
       <Route path='/about' element={<AboutScreen />} />
       <Route path='/new-password' element={<NewPass />} />
-      <Route path='/PersonalDetails' element={<PersonalDetails />} />
+      <Route
+        path='/PersonalDetails'
+        element={<PersonalDetails />}
+      />
       <Route path='/Document' element={<Document />} />
       <Route path='/IdentityVerification' element={<IdentityVerification />} />
       <Route path='/VehicleVerification' element={<VehicleVerification />} />
@@ -83,8 +93,7 @@ function App() {
         element={<PassengerHome />}
       />
     </Routes>
-  
-);
+  );
 }
 
 export default App;
