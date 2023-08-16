@@ -5,14 +5,21 @@ const axiosInstance = axios.create({
 })
 
 export function logAxiosResponse(errorFromTrial) {
-    if (!errorFromTrial instanceof Error)
-        return alert(JSON.stringify(errorFromTrial))
+    if (!errorFromTrial instanceof Error) {
+        alert(JSON.stringify(errorFromTrial))
+        return { axiosError: false }
+    }
     if (errorFromTrial.response) {
         const errResponse = errorFromTrial.response
         console.log(errResponse)
-        return alert(errResponse.data.message)
+        alert(errResponse.data.message)
+        return {
+            axiosError: true,
+            ...errResponse
+        }
     }
     alert(errorFromTrial.message)
+    return { axiosError: false }
 }
 
 export default axiosInstance

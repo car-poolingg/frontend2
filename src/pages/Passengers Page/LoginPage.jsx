@@ -37,7 +37,11 @@ const LoginPage = () => {
             )
 
         } catch (errorRegistering) {
-            logAxiosResponse(errorRegistering)
+            const axiosResponse = logAxiosResponse(errorRegistering)
+            if (axiosResponse.axiosError && axiosResponse.status == 401)
+                navigate(
+                    `/VerifyPassword/${loginData.email}`,
+                )
         };
     };
 
