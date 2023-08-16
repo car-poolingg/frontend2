@@ -37,7 +37,6 @@ const SignUpPage = () => {
         return signUpState
     }
 
-
     const handleUserRegistration = async (eventObj) => {
         eventObj.preventDefault();
         try {
