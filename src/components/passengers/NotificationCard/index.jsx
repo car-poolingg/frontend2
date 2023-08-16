@@ -30,6 +30,7 @@ function NotificationCard({
         <span>
           {" "}
           <span className='username'> @{username}</span>
+          &nbsp;
           {message}
         </span>
         <div className='time'>
