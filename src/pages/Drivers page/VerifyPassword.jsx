@@ -3,13 +3,14 @@ import { Icon } from '@iconify/react';
 import "../../bootstrap.min.css"
 // import './Styles.scss';
 import "./DriversPage.css"
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import axiosInstance, { logAxiosResponse } from '../../utils/request';
 
 const VerifyPassword = () => {
   const [token, setToken] = useState(Array(4));
   const params = useParams();
   const userEmail = params.email
+  const navigate = useNavigate()
 
   const changeTokenIndex = (e) => {
     const adj_token = [...token]
@@ -32,6 +33,7 @@ const VerifyPassword = () => {
       )
       // register successful, proceed
       alert(JSON.stringify(response.data.msg))
+      navigate('/Profile')
     } catch (errorVerifying) {
       logAxiosResponse(errorVerifying)
     }
