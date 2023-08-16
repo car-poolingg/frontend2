@@ -31,10 +31,12 @@ import ProfilePage from "./pages/Drivers page/ProfilePage";
 import RatePassenger from "./pages/Drivers page/RatePassenger";
 import RatingDriver from "./pages/Drivers page/RatingDriver";
 import AvailableDrivers from "./pages/Passengers/AvailableDrivers";
+import Ongoing from "./pages/Passengers Page/OngoingRide";
 import OTP from "./pages/OTP/OTP";
 import PersonalInfo from "./pages/Drivers page/PersonalInfo";
 import VehicleVerificationTWO from "./pages/Drivers page/VehicleVerificationTWO";
 import RequestRide from "./pages/Drivers page/RequestRide";
+import CurrentRide from "./pages/Passengers Page/CurrentRide";
 
 
 function App() {
@@ -152,11 +154,9 @@ function App() {
       <Route path="/ongoing-ride" element={<OngoingRide/>}/>
       <Route path="/Drivprofile-page" element={<DrivProfilepage/>}/>
       <Route path="/change-password" element={<Changepass/>}/>
+      <Route path="/Ongoing" element={<Ongoing/>}/>
       <Route path="/OTP" element={<OTP/>}/>
       <Route path="/PersonalInfo" element={<PersonalInfo/>}/>
-      <Route path="/VehicleVerificationTWO" element={<VehicleVerificationTWO/>}/>
-      <Route path="/RequestRide" element={<RequestRide/>}/>
-
       {/* blame: @xpanvictor. can make a page later */}
       <Route
         path="*"
