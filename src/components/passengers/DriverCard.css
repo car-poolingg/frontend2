@@ -58,3 +58,7 @@
 .para-text .modal-content {
   border: none !important;
 }
+.cancel-modal-text {
+  font-size: 23px;
+  margin: 60px 10px;
+}

@@ -4,6 +4,7 @@ import "./DriverCard.css";
 import { Icon } from "@iconify/react";
 import { Button, Modal } from "react-bootstrap";
 import { useNavigate } from "react-router";
+import CustomModal from "../global/CustomModal";
 function DriverCard({
   name = "Tony Stark",
   picture = "/Assets/RatingPicture.svg",
@@ -15,7 +16,9 @@ function DriverCard({
 }) {
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
-
+  const [cancelShow, setCancelShow] = useState(false);
+  const handleCancelClose = () => setCancelShow(false);
+  const handleCancelShow = () => setCancelShow(true);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   return (
@@ -46,7 +49,11 @@ function DriverCard({
           </div>
           {variant == "ongoing" ? (
             <div className='actions d-flex align-items-center '>
-              <span className='red'>x</span>
+              <span
+                className='red'
+                onClick={handleCancelShow}>
+                x
+              </span>
               <span className='blue' onClick={handleShow}>
                 ✓
               </span>
@@ -127,44 +134,56 @@ function DriverCard({
           )}
         </div>
       </div>
-      <Modal
-        show={show}
-        onHide={handleClose}
-        className='bottom-modal-container'
-        dialogClassName='bottom-modal  para-text'>
-        {/* <Modal.Header
-          className='share-modal-header'
-          closeButton>
-          <Modal.Title className='text-md'>
-            Share Drivers Information
-            <span className='share-sub-title'>
-              Share with anyone
-            </span>
-          </Modal.Title>
-        </Modal.Header> */}
-        <Modal.Body className='text-center para-text'>
-          <span className='text-bold'>
-            Thanks for Riding with Tag!{" "}
-          </span>
-          <br />
-          <p className='bottom-modal-text'>
-            Glad your ride was a success! We appreciate your
-            choice and hope to see you again soon.
-          </p>
-          <br />
-          <div className=' px-3'>
-            <Button
-              onClick={() => {
-                navigate("/RatingDriver");
-                handleClose();
-              }}
-              variant='primary'
-              className='btn-block '>
-              Rate Driver
-            </Button>
-          </div>
-        </Modal.Body>
-      </Modal>
+      <CustomModal
+        show={cancelShow}
+        handleClose={handleCancelClose}>
+        <span className='text-bold cancel-modal-text'>
+          Are you sure you want to end this ride?{" "}
+        </span>
+        <br />
+        <div className='my-2 px-3'>
+          <Button
+            onClick={() => {
+              handleCancelClose();
+            }}
+            variant='danger'
+            className='btn-block '>
+            End Ride
+          </Button>
+        </div>
+        <div className='my-3 px-3'>
+          <Button
+            onClick={() => {
+              handleCancelClose();
+            }}
+            variant='outline-danger'
+            className='btn-block '>
+            Cancel
+          </Button>
+        </div>
+      </CustomModal>
+      <CustomModal show={show} handleClose={handleClose}>
+        <span className='text-bold'>
+          Thanks for Riding with Tag!{" "}
+        </span>
+        <br />
+        <p className='bottom-modal-text'>
+          Glad your ride was a success! We appreciate your
+          choice and hope to see you again soon.
+        </p>
+        <br />
+        <div className=' px-3'>
+          <Button
+            onClick={() => {
+              navigate("/RatingDriver");
+              handleClose();
+            }}
+            variant='primary'
+            className='btn-block '>
+            Rate Driver
+          </Button>
+        </div>
+      </CustomModal>
     </>
   );
 }
