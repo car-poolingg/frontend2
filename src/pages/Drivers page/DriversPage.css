@@ -216,6 +216,7 @@ hr{
 
 .SupportContact{
     display: flex;
+    margin-top: 5%;
 }
 .SupportText{
     margin-left: 5%;
@@ -290,4 +291,53 @@ hr{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+
+/*Passenger Profile page*/
+
+.PictureText{
+    margin-top: 5%;
+}
+.ProfileText{
+    color: var(--text-grey, #8A8894);
+font-family: Rubik;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px; /* 157.143% */
+margin: 3% 0;
+}
+.PassengerPic{
+    width: 100%;
+}
+.RatingStyle{
+    display: flex;
+    flex-direction: row;
+}
+.HeadingInfo{
+    color: var(--text-black, #212121);
+font-family: Rubik;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 120%; /* 24px */
+margin-bottom: 7%;
+}
+.PassengerInfo{
+    margin: 7% 0;
+}
+.RatingText{
+    color: var(--text-black, #212121);
+font-family: Rubik;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: 120%; /* 24px */
+margin: 0 0 5%;
+}
+
+/*Drivers and Passenger Rating Page*/
+.DriversPassengerPage{
+    margin: 5% 7%;
 }
