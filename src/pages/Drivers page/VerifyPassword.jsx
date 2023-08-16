@@ -44,6 +44,8 @@ const VerifyPassword = () => {
 
   const handleResendToken = async () => {
     try {
+      if (!userEmail)
+        throw new Error("No email found, link broken!")
       const response = await axiosInstance.post(
         "/auth/resend-email",
         {

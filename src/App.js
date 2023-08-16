@@ -122,6 +122,11 @@ function App() {
         path='/passengers/*'
         element={<PassengerHome />}
       />
+      {/* blame: @xpanvictor. can make a page later */}
+      <Route
+        path="*"
+        element={<h1>Page not found</h1>}
+      />
     </Routes>
   );
 }
