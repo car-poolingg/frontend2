@@ -34,6 +34,7 @@ import AvailableDrivers from "./pages/Passengers/AvailableDrivers";
 import Ongoing from "./pages/Passengers Page/OngoingRide";
 import OTP from "./pages/OTP/OTP";
 import PersonalInfo from "./pages/Drivers page/PersonalInfo";
+import CurrentRide from "./pages/Passengers Page/CurrentRide";
 
 
 function App() {
@@ -154,6 +155,7 @@ function App() {
       <Route path="/Ongoing" element={<Ongoing/>}/>
       <Route path="/OTP" element={<OTP/>}/>
       <Route path="/PersonalInfo" element={<PersonalInfo/>}/>
+      <Route path="/CurrentRide" element={<CurrentRide/>}/>
       {/* blame: @xpanvictor. can make a page later */}
       <Route
         path="*"
