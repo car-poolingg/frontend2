@@ -56,7 +56,7 @@ const DriversLogin = () => {
       // register successful, proceed
       alert(JSON.stringify(response.data.msg))
       navigate(
-        `/VerifyPassword/${validData.email}`,
+        `/Document/${validData.email}`,
       )
 
     } catch (errorRegistering) {
