@@ -19,7 +19,6 @@ import ForgotPassword from "./pages/Drivers page/ForgotPassword";
 import VerifyPassword from "./pages/Drivers page/VerifyPassword";
 import VerificationInput from "./pages/OTPVerification/OTPVerification";
 import EditProfile from "./pages/Drivers page/EditProfile";
-import AvailableDrivers from "./pages/Passengers/AvailableDrivers";
 import OngoingRide from "./pages/Drivers page/OngoingRide"
 import Profile from "./pages/Passengers/Profile";
 import PassengerHome from "./pages/Passengers/Home";
@@ -27,7 +26,7 @@ import ProfilePage from "./pages/Drivers page/ProfilePage";
 import RatePassenger from "./pages/Drivers page/RatePassenger";
 import RatingDriver from "./pages/Drivers page/RatingDriver";
 import AvailableDrivers from "./pages/Passengers/AvailableDrivers";
-import Profile from "./pages/Passengers/Profile";
+
 
 
 function App() {
