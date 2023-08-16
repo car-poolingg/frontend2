@@ -7,6 +7,8 @@ import "./DriversPage.css"
 import { boolAnyEmptyInList } from '../../utils/validators';
 import axiosInstance, { logAxiosResponse } from '../../utils/request';
 
+// @LightsidEsys the file pickers not working
+
 const DriversLogin = () => {
   const navigate = useNavigate()
 
