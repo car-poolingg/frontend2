@@ -47,15 +47,27 @@ function DriverCard({
               />{" "}
             </p>
           </div>
-          {variant == "ongoing" ? (
+          {variant === "ongoing" ? (
             <div className='actions d-flex align-items-center '>
               <span
                 className='red'
                 onClick={handleCancelShow}>
-                x
+                <Icon
+                  icon={"mdi:close-thick"}
+                  color='#fff'
+                  height={"24px"}
+                  width={"24px"}
+                  className='mb-auto'
+                />
               </span>
               <span className='blue' onClick={handleShow}>
-                ✓
+                <Icon
+                  icon={"mdi:check"}
+                  color='#fff'
+                  height={"24px"}
+                  width={"24px"}
+                  className='mb-auto'
+                />
               </span>
             </div>
           ) : (
@@ -76,14 +88,24 @@ function DriverCard({
         </div>
         <div className='d-flex align-items-center justify-content-between px-3'>
           {variant !== "ongoing" && (
-            <>
+            <div
+              style={{
+                display: "flex",
+              }}>
               {" "}
-              <Icon
+              {/* <Icon
                 icon={"material-symbols:directions-car"}
                 color='#161616'
                 height={"24px"}
                 width={"24px"}
                 className='mb-auto'
+              /> */}
+              <img
+                className='mb-auto'
+                src='/Assets/people-in-car.svg'
+                alt='car'
+                height={"24px"}
+                width={"24px"}
               />
               <div>
                 <span className='text-md ml-2'>
@@ -101,7 +123,7 @@ function DriverCard({
                   {passengers} passengers
                 </span>
               </div>
-            </>
+            </div>
           )}
 
           <div
