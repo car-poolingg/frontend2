@@ -47,3 +47,14 @@
   align-items: center;
   justify-content: center;
 }
+.bottom-modal-text {
+  margin: 0 41px;
+  font-weight: 400;
+  color: #000;
+}
+.text-bold {
+  font-weight: 600;
+}
+.para-text .modal-content {
+  border: none !important;
+}
