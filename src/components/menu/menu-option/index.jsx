@@ -1,8 +1,15 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
-function MenuOption({ icon, name, notification }) {
+function MenuOption({ icon, name, notification, link }) {
+  const navigate = useNavigate();
+  const changeRoute = () => {
+    if (link) {
+      navigate(link);
+    }
+  };
   return (
-    <div className='menu-option'>
+    <div onClick={changeRoute} className='menu-option'>
       {icon}
       <span>{name}</span>
       {notification && (

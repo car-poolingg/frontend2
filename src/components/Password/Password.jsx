@@ -4,9 +4,12 @@ import React, { useState } from 'react';
 import { Icon } from '@iconify/react';
 import './Password.css';
 
-const PasswordInput = () => {
+const PasswordInput = ({
+  value,
+  name,
+  onChange
+}) => {
     const [showPassword, setShowPassword] = useState(false);
-    const [password, setPassword] = useState('');
   
     const handleTogglePassword = () => {
       setShowPassword(!showPassword);
@@ -16,8 +19,9 @@ const PasswordInput = () => {
       <div className="password-container">
         <input
           type={showPassword ? 'text' : 'password'}
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          value={value}
+          onChange={onChange}
+          name={name}
         //   placeholder="Enter password"
           className="password-input"
         />
