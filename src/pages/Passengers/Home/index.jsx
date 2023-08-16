@@ -3,6 +3,8 @@ import { Route, Routes } from "react-router-dom";
 import AvailableDrivers from "../AvailableDrivers";
 import Profile from "../Profile";
 import Notifications from "../Notifications";
+import OngoingRides from "../Rides/Ongoing";
+import FindRide from "../Rides/Find";
 
 function PassengerHome() {
   return (
@@ -16,6 +18,11 @@ function PassengerHome() {
         path='notifications'
         element={<Notifications />}
       />
+      <Route
+        path='ongoingRides'
+        element={<OngoingRides />}
+      />
+      <Route path='findRide' element={<FindRide />} />
     </Routes>
   );
 }
