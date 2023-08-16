@@ -28,13 +28,11 @@ const ForgotPassword = () => {
   }
   return (
     <div>
-// <<<<<<< dev
-//       <div className='NavTop'>
+{/* //       <div className='NavTop'>
 //         <div className='iconEllipse'>
 //           <Icon icon="material-symbols:arrow-back" color="#0c3ead" height={"24px"} width={"24px"} />
 //         </div>
-//       </div>
-// =======
+//       </div>= */}
          {/* <div className='NavTop'>
      <div className='iconEllipse'>
      <Icon icon="material-symbols:arrow-back" color="#0c3ead" height={"24px"} width={"24px"} />
