@@ -23,7 +23,8 @@ const LandingPage = () => {
           // TODO: could use a master button component
           onClick={() => navigate('/Signup')}
           type="button" className='purplebutton'>Sign up</button>
-        <button type="button" className='whitebutton'>Become a Driver</button>
+        <button onClick={() => navigate('/DriversSignup')}
+          type="button" className='whitebutton'>Become a Driver</button>
         <div className='stats'>
           <span><h1>10+</h1><p>passengers</p></span>
           <span><h1>20+</h1><p>drivers</p></span>

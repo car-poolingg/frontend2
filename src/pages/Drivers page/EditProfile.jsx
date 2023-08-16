@@ -4,17 +4,13 @@ import "../../bootstrap.min.css"
 // import './Styles.scss';
 import "./DriversPage.css"
 import ProfilePicture from '../../components/ProfilePicture/ProfilePicture';
+import Header from '../../components/global/Header/Header';
 
 
 const EditProfile = () => {
   return (
     <div>
-        <div className='NavTop'>
-     <div className='iconEllipse'>
-     <Icon icon="material-symbols:arrow-back" color="#0c3ead" height={"24px"} width={"24px"} />
-     </div>
-      <h6 className='NavTopText' style={{marginBottom: "0px"}}>Edit Profile</h6>
-      </div>
+     <Header title={"Edit Profile"}/>
 
       <div className='FormPage'>
             <form action="">

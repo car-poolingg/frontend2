@@ -58,19 +58,66 @@ function App() {
       <Route path='/VehicleVerification' element={<VehicleVerification />} />
       <Route path='/License' element={<License />} />
       <Route path='/Support' element={<Support />} />
-      <Route path='/DriversProfile' element={<DriversProfile />} />
-      <Route path='/ForgotPassword' element={<ForgotPassword />} />
-      <Route path='/VerifyPassword' element={<VerifyPassword />} />
-      <Route path='/ProfilePage' element={<ProfilePage />} />
-      <Route path='/EditProfile' element={<EditProfile />} />
-      <Route path='/passengers/*'element={<PassengerHome />}  />
-      <Route path='/AvailableDrivers' element={<AvailableDrivers />} />
-      <Route path = '/OngoingRide' element={<OngoingRide/>} />
-      <Route path='/verifycode' element={<VerificationInput />} />
-      <Route path='/RatePassenger' element={<RatePassenger />} />
-      <Route path='/RatingDriver' element={<RatingDriver />} />
+      <Route
+        path='/DriversProfile'
+        element={<DriversProfile />}
+      />
+      <Route
+        path='/ForgotPassword'
+        element={<ForgotPassword />}
+      />
+      <Route
+        path='/VerifyPassword/:email'
+        element={<VerifyPassword />}
+      />
+      <Route
+        path='/ProfilePage'
+        element={<ProfilePage />}
+      />
+      {/* <Route
+        path='/NewPassword'
+        element={<NewPassword />}
+      /> */}
+      <Route
+        path='/EditProfile'
+        element={<EditProfile />}
+      />
+      <Route
+        path='/passengers/*'
+        element={<PassengerHome />}
+      />
+      <Route
+        path='/AvailableDrivers'
+        element={<AvailableDrivers />}
+      />
+      <Route
+        path='/verifycode'
+        element={<VerificationInput />}
+      />
+      <Route
+        path='/RatePassenger'
+        element={<RatePassenger />}
+      />
+      <Route
+        path='/RatingDriver'
+        element={<RatingDriver />}
+      />
+      <Route path='/OngoingRide' element={<OngoingRide />} />
+
+      {/* //       <Route path='/DriversProfile' element={<DriversProfile />} />
+//       <Route path='/ForgotPassword' element={<ForgotPassword />} />
+//       <Route path='/VerifyPassword' element={<VerifyPassword />} />
+//       <Route path='/ProfilePage' element={<ProfilePage />} />
+//       <Route path='/EditProfile' element={<EditProfile />} />
+//       <Route path='/passengers/*'element={<PassengerHome />}  />
+//       <Route path='/AvailableDrivers' element={<AvailableDrivers />} />
+//       <Route path = '/OngoingRide' element={<OngoingRide/>} />
+//       <Route path='/verifycode' element={<VerificationInput />} />
+//       <Route path='/RatePassenger' element={<RatePassenger />} />
+//       <Route path='/RatingDriver' element={<RatingDriver />} /> */}
+
       <Route path='/Profile' element={<Profile />} />
-          <Route
+      <Route
         path='/DriversProfile'
         element={<DriversProfile />}
       />
@@ -86,7 +133,7 @@ function App() {
         path='/VerifyPassword'
         element={<VerifyPassword />}
       />
-      
+
       <Route
         path='/EditProfile'
         element={<EditProfile />}
@@ -101,6 +148,11 @@ function App() {
       <Route path="/ongoing-ride" element={<OngoingRide/>}/>
       <Route path="/drivprofile-page" element={<DrivProfilepage/>}/>
       <Route path="/change-password" element={<Changepass/>}/>
+      {/* blame: @xpanvictor. can make a page later */}
+      <Route
+        path="*"
+        element={<h1>Page not found</h1>}
+      />
     </Routes>
   );
 }

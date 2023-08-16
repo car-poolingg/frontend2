@@ -3,17 +3,13 @@ import { Icon } from '@iconify/react';
 import "../../bootstrap.min.css"
 // import './Styles.scss';
 import "./DriversPage.css";
+import Header from '../../components/global/Header/Header';
 import FileChooser from '../../components/Upload/uploadfile';
 
 const IdentityVerification = () => {
   return (
     <div>
-        <div className='NavTop'>
-        <div className='iconEllipse'>
-        <Icon icon="material-symbols:arrow-back" color="#0c3ead" height={"24px"} width={"24px"} />
-        </div>
-        <h6 className='DetailsNavTopText'>Verify your identity</h6>
-    </div>
+        <Header title={"Verify you identity"}/>
         
         <div className='DriversDetails'>
           <p className='IdentityText'>For easy verification, make sure that the information

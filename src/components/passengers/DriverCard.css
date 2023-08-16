@@ -28,8 +28,7 @@
   font-weight: bold;
   font-size: 30px;
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -38,11 +37,10 @@
   color: white;
   font-weight: bold;
   background-color: blue;
-  padding: 5px;
+
   font-size: large;
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
