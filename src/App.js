@@ -32,6 +32,8 @@ import RatePassenger from "./pages/Drivers page/RatePassenger";
 import RatingDriver from "./pages/Drivers page/RatingDriver";
 import AvailableDrivers from "./pages/Passengers/AvailableDrivers";
 import Ongoing from "./pages/Passengers Page/OngoingRide";
+import OTP from "./pages/OTP/OTP";
+import PersonalInfo from "./pages/Drivers page/PersonalInfo";
 
 
 function App() {
@@ -147,9 +149,11 @@ function App() {
       <Route path="/admin-forgottenpassword" element={<AdminForgottenPassword/>}/>
       <Route path="/admin-newpassword" element={<AdminNewpass/>}/>
       <Route path="/ongoing-ride" element={<OngoingRide/>}/>
-      <Route path="/drivprofile-page" element={<DrivProfilepage/>}/>
+      <Route path="/Drivprofile-page" element={<DrivProfilepage/>}/>
       <Route path="/change-password" element={<Changepass/>}/>
       <Route path="/Ongoing" element={<Ongoing/>}/>
+      <Route path="/OTP" element={<OTP/>}/>
+      <Route path="/PersonalInfo" element={<PersonalInfo/>}/>
       {/* blame: @xpanvictor. can make a page later */}
       <Route
         path="*"
