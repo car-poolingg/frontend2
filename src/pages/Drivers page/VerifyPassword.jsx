@@ -5,6 +5,8 @@ import "../../bootstrap.min.css"
 import "./DriversPage.css"
 import { useNavigate, useParams } from 'react-router-dom';
 import axiosInstance, { logAxiosResponse } from '../../utils/request';
+import { storeData } from '../../utils/api.storage';
+import StorageConstants from '../../utils/constants.storage';
 
 const VerifyPassword = () => {
   const [token, setToken] = useState(Array(4));
@@ -33,6 +35,7 @@ const VerifyPassword = () => {
       )
       // register successful, proceed
       alert(JSON.stringify(response.data.msg))
+      storeData(StorageConstants.Email, userEmail)
       navigate('/Profile')
     } catch (errorVerifying) {
       logAxiosResponse(errorVerifying)

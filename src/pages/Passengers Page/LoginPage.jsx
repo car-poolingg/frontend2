@@ -5,6 +5,10 @@ import "./LoginPage.css"
 import NavBar from '../../components/Nav/Nav'
 import PasswordInput from "../../components/Password/Password"
 // import RememberMeButton from '../../components/RemeberMe/RememberMe';
+import axiosInstance, { logAxiosResponse } from '../../utils/request';
+import { useNavigate } from 'react-router-dom';
+import { storeData } from '../../utils/api.storage';
+import StorageConstants from '../../utils/constants.storage';
 
 
 const LoginPage = () => {
@@ -13,6 +17,7 @@ const LoginPage = () => {
         email: "",
         password: ""
     })
+    const navigate = useNavigate()
 
     const handleUserLogin = async (eventObj) => {
         eventObj.preventDefault();
@@ -26,6 +31,7 @@ const LoginPage = () => {
             )
             // register successful, proceed
             alert(JSON.stringify(response.data.msg))
+            storeData(StorageConstants.Email, loginData.email)
             navigate(
                 `/Profile`,
             )
