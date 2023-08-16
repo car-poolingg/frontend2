@@ -50,6 +50,7 @@ function Header({ title, extend, menuType }) {
             }
             name={"Notification"}
             notification={true}
+            link={"/passengers/notifications"}
           />
           <Accordion
             className='accordion-menu-option'
