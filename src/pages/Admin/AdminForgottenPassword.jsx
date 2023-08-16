@@ -8,7 +8,7 @@ const AdminForgottenPassword = () => {
 
     <div className='Whitebox'>
         <p className='text'>Forgotten Password?</p>
-        <p className='text2'>Don’t worry it occurs. Please enter your email address linked with your account</p>
+        <p className='text2'>Don't worry it occurs. Please enter your email address linked with your account</p>
     
 
     <div>
@@ -21,7 +21,7 @@ const AdminForgottenPassword = () => {
     </form>
     </div>
     <div className='bottomtext'>
-        <p className='text3'><span className='browntext'>Remember Password?</span> <span className='bluetext'><a href="">Log in</a></span></p>
+        <p className='text3'><span className='browntext'>Remember Password?</span> <span className='bluetext'><a href="/admin-login">Log in</a></span></p>
     </div>
     </div>
 </div> 

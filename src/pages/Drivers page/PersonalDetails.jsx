@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { Icon } from '@iconify/react';
 import "../../bootstrap.min.css"
 // import './Styles.scss';
@@ -7,9 +8,10 @@ import "./DriversPage.css"
 
 
 const PersonalDetails = () => {
+  const navigate = useNavigate()
   return (
     <div>
-    <Header title={"Personal Details and Vehicle Details"}/>
+    <Header title={"Personal Information and Vehicle Details"} />
 
         <div className='DriversDetails'>
             <p className='DetailsText'>Only your first name and vehicle details are visible to 
@@ -76,7 +78,8 @@ const PersonalDetails = () => {
               </div>
 
               <p className='VehicleText'>if you don't find your vehicle model from the list then let us know. </p>
-                    <input className='SignUpBtn' type="submit" value="Next" />
+       
+                    <input className='SignUpBtn' type="submit" value="Next" onClick={() => navigate('/License')} />
                 </form>
             </div>
         </div>

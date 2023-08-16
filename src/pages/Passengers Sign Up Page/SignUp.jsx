@@ -180,7 +180,7 @@ const SignUpPage = () => {
                             />
                         </div>
                         {/* <RememberMeButton/> */}
-                        <button className='LoginBtn' type='submit'>
+                        <button onClick={() => navigate('/verifycode')} className='LoginBtn' type='submit'>
                             Sign Up
                         </button>
                     </form>
@@ -201,7 +201,7 @@ const SignUpPage = () => {
                         <p className='account'>
                             Already a user?{" "}
                             <span>
-                                <a href='' className='signup'>
+                                <a href='/admin-login' className='signup'>
                                     Log in
                                 </a>
                             </span>
