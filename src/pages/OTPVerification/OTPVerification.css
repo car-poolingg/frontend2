@@ -64,8 +64,15 @@
 }
 
 .code .whitebox {
-  padding: 24px;
+  /* padding: 24px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 90px);
+}
 
+.code .top {
+  padding: 6%;
 }
 
 .code .SendBtn {
@@ -102,17 +109,25 @@
   gap: 5px;
   justify-content: center;
   margin-top: 20px;
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
-  border-radius: 48px;
+  border-radius: 48px 48px 0 0;
   background: #0C3EAD;
-  bottom: 0;
-
+  margin-right: -24px;
+  height: 50vh;
 }
 
 .code .keypad button {
-  height: 50px;
+  height: 100px;
   font-size: 1.2rem;
+  background: #0C3EAD;
+  color: #E2EBFD;
+font-family: Rubik;
+font-size: 40px;
+font-style: normal;
+font-weight: 600;
+line-height: 29px; /* 72.5% */
+border: none;
 }
 
 .code .verification-input {
@@ -163,4 +178,7 @@
   border-color: blue; /* Change border color for active digit */
 }
 
+.code .flex {
+
+}
 }

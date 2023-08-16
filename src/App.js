@@ -21,6 +21,12 @@ import EditProfile from "./pages/Drivers page/EditProfile";
 import AvailableDrivers from "./pages/Passengers/AvailableDrivers";
 import Profile from "./pages/Passengers/Profile";
 import PassengerHome from "./pages/Passengers/Home";
+import AdminLoginPage from "./pages/Admin/AdminLogin"
+import AdminForgottenPassword from "./pages/Admin/AdminForgottenPassword"
+import AdminNewpass from "./pages/Admin/AdminNewPassword"
+import OngoingRide from "./pages/Passengers Page/OngoingRide"
+import DrivProfilepage from "./pages/Passengers Page/DrivProfilepage"
+import Changepass from "./pages/NewPassword/changepassword";
 
 function App() {
   return (
@@ -73,6 +79,12 @@ function App() {
         path='/passengers/*'
         element={<PassengerHome />}
       />
+      <Route path="/admin-login" element={<AdminLoginPage/>}/>
+      <Route path="/admin-forgottenpassword" element={<AdminForgottenPassword/>}/>
+      <Route path="/admin-newpassword" element={<AdminNewpass/>}/>
+      <Route path="/ongoing-ride" element={<OngoingRide/>}/>
+      <Route path="/drivprofile-page" element={<DrivProfilepage/>}/>
+      <Route path="/change-password" element={<Changepass/>}/>
     </Routes>
   
 );

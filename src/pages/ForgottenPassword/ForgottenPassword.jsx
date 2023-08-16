@@ -1,14 +1,16 @@
 import React from 'react'
 import "./ForgottenPassword.css"
+import Header from '../../components/global/Header/Header'
 
 const ForgottenPassword = () => {
   return (
     <div className='ForgottenPassword'>
-        <div className='BlueContainer'>
+        {/* <div className='BlueContainer'>
             <div className='WhiteContainer'>
                 <a href=""><img className='arrow-left' src="/Assets/arrow-left.svg" alt="arrow-left" /></a>
             </div>
-        </div>
+        </div> */}
+        <Header/>
 
         <div className='Whitebox'>
             <p className='text'>Forgotten Password?</p>
