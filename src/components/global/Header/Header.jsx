@@ -72,7 +72,7 @@ function Header({ title, extend, menuType }) {
               <Accordion.Body>
                 <MenuOption
                   name={"Find a ride"}
-                  link={"/passengers/findRide"}
+                  link={"/PassengersRoutePage"}
                 />
                 <MenuOption
                   name={"Ongoing ride"}
@@ -109,9 +109,8 @@ function Header({ title, extend, menuType }) {
 
       {/* Header component */}
       <div
-        className={`NavTop-header ${
-          extend ? "pb-nav " : "header-h"
-        }`}>
+        className={`NavTop-header ${extend ? "pb-nav " : "header-h"
+          }`}>
         {/* Conditional rendering of menu icon or back arrow */}
         {menuType ? (
           <button
