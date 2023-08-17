@@ -36,6 +36,7 @@ const LoginPage = () => {
             navigate(
                 `/Profile`,
             )
+            // TODO: store token here
 
         } catch (errorRegistering) {
             const axiosResponse = logAxiosResponse(errorRegistering)

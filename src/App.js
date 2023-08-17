@@ -142,12 +142,12 @@ function App() {
         path='/passengers/*'
         element={<PassengerHome />}
       />
-      <Route path="/admin-login" element={<AdminLoginPage/>}/>
-      <Route path="/admin-forgottenpassword" element={<AdminForgottenPassword/>}/>
-      <Route path="/admin-newpassword" element={<AdminNewpass/>}/>
-      <Route path="/ongoing-ride" element={<OngoingRide/>}/>
-      <Route path="/drivprofile-page" element={<DrivProfilepage/>}/>
-      <Route path="/change-password" element={<Changepass/>}/>
+      <Route path="/admin-login" element={<AdminLoginPage />} />
+      <Route path="/admin-forgottenpassword" element={<AdminForgottenPassword />} />
+      <Route path="/admin-newpassword" element={<AdminNewpass />} />
+      <Route path="/ongoing-ride" element={<OngoingRide />} />
+      <Route path="/drivprofile-page" element={<DrivProfilepage />} />
+      <Route path="/change-password/*" element={<Changepass />} />
       {/* blame: @xpanvictor. can make a page later */}
       <Route
         path="*"

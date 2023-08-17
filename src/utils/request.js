@@ -1,7 +1,15 @@
 import axios from "axios";
+import { getData } from "./api.storage";
+import StorageConstants from "./constants.storage";
 
 const axiosInstance = axios.create({
     baseURL: "https://tag-c5ba886bbc3c.herokuapp.com/api/v1",
+})
+
+export const authAxiosInstance = axiosInstance({
+    headers: {
+        Authorization: `Bearer ${getData(StorageConstants.Token).data}`
+    }
 })
 
 export function logAxiosResponse(errorFromTrial) {
