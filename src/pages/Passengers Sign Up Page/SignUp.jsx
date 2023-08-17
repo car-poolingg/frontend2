@@ -180,7 +180,7 @@ const SignUpPage = () => {
                             />
                         </div>
                         {/* <RememberMeButton/> */}
-                        <button className='LoginBtn' type='submit'>
+                        <button onClick={() => navigate('/verifycode')} className='LoginBtn' type='submit'>
                             Sign Up
                         </button>
                     </form>

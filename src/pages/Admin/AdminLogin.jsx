@@ -15,7 +15,7 @@ import PasswordInput from "../../components/Password/Password"
             </div>
         <div className='FormPage'>
             <div>
-                <p className='text'>Log <span className='text2'>in</span></p>
+                <p className='text'>Log <span className='text2'>In</span></p>
             </div>
             <div class="google-button-container">
                 <button class="google-button">
@@ -43,14 +43,14 @@ import PasswordInput from "../../components/Password/Password"
                     <div className='checkrem'>
                         <input type="checkbox" className='check' /><span className='remember'>Remember me</span>
                     </div>
-                    <a href='' className='forgotten'>Forgotten Password?</a>
+                    <a href='/forgotten-password' className='forgotten'>Forgotten Password?</a>
                 </div>
                 {/* <RememberMeButton/> */}
                 <input className='LoginBtn' type="submit" value="Log in" />
 
                 <div className='PrivacyFooter'>
                     {/* <p>By signing up, you accept our <br /> <span><a href="TermsOfService">Terms of Service and Privacy Policy</a></span></p> */}
-                    <p className='account'>Dont have an account? <span><a href="" className='signup'>Sign up</a></span></p>
+                    <p className='account'>Dont have an account? <span><a href="/SignUp" className='signup'>Sign up</a></span></p>
                 </div>
                 </form>
             </div>

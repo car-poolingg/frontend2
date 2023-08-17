@@ -17,12 +17,12 @@ const LandingPage = () => {
       </div>
       <div className='textclass'>
         <div>
-          <p className='textstyle'>Earn,<span className='textColor'>Connect Contribute</span>  to the society</p>
+          <p className='textstyle'><b>Going<span className='textColor'> Somewhere? Tag</span> along</b></p>
         </div>
         <button
           // TODO: could use a master button component
           onClick={() => navigate('/Signup')}
-          type="button" className='purplebutton'>Sign up</button>
+          type="button" className='purplebutton'>Sign Up</button>
         <button onClick={() => navigate('/DriversSignup')}
           type="button" className='whitebutton'>Become a Driver</button>
         <div className='stats'>
@@ -108,17 +108,17 @@ const LandingPage = () => {
 
         <select class=" FAQform-select" id="inputGroupSelect02" >
           <option selected><p className='dropdownText'>How can i earn as a driver on the website</p></option>
-          <option disabled="disabled">One</option>
+          <option disabled="disabled">You can ean as a driver by simply picking up and dropping passengers at their your destination</option>
         </select>
 
         <select class=" FAQform-select" id="inputGroupSelect02">
-          <option selected><p className='dropdownText'>How can i earn as a driver on the website</p></option>
-          <option disabled="disabled">One</option>
+          <option selected><p className='dropdownText'>What do i need to sign up a driver?</p></option>
+          <option disabled="disabled">All you need is a valid ID, both passport and license and also a functional car</option>
         </select>
 
         <select class=" FAQform-select" id="inputGroupSelect02">
-          <option selected><p className='dropdownText'>How can i earn as a driver on the website</p></option>
-          <option disabled="disabled">One</option>
+          <option selected><p className='dropdownText'>As a passenger, How fast is a ride going to be available</p></option>
+          <option disabled="disabled">This comes down to the number of available drivers around you</option>
         </select>
       </div>
 
@@ -127,7 +127,7 @@ const LandingPage = () => {
         <div className='LastImageDiv'><h1 className='LastImageText'>RideTogether: Your Carpooling Companion</h1></div>
         <div className='LastImageDiv2'><p className='LastImageText2'>"Join Our Eco-Friendly Carpooling Community
           - Share Rides, Save Miles, and Build Meaningful Connections with Like-Minded Commuters"</p></div>
-        <button type="button" className='purplebutton' style={{ borderRadius: "5px" }}>Sign up to get started</button>
+        <button type="button" className='purplebutton' style={{ borderRadius: "5px", width: "70%"}}>Sign up to get started</button>
       </div>
     </div>
 

@@ -31,6 +31,15 @@ import ProfilePage from "./pages/Drivers page/ProfilePage";
 import RatePassenger from "./pages/Drivers page/RatePassenger";
 import RatingDriver from "./pages/Drivers page/RatingDriver";
 import AvailableDrivers from "./pages/Passengers/AvailableDrivers";
+import Ongoing from "./pages/Passengers Page/OngoingRide";
+import OTP from "./pages/OTP/OTP";
+import PersonalInfo from "./pages/Drivers page/PersonalInfo";
+import VehicleVerificationTWO from "./pages/Drivers page/VehicleVerificationTWO";
+import RequestRide from "./pages/Drivers page/RequestRide";
+import CurrentRide from "./pages/Passengers Page/CurrentRide";
+import DriversRoutePage from "./pages/FindYourRoute/DriversRoutePage";
+import PassengersRoutePage from "./pages/FindYourRoute/PassengersRoutePage";
+import DriversHomeScreen from "./pages/Drivers page/DriversHomeScreen";
 
 
 function App() {
@@ -142,12 +151,23 @@ function App() {
         path='/passengers/*'
         element={<PassengerHome />}
       />
-      <Route path="/admin-login" element={<AdminLoginPage />} />
-      <Route path="/admin-forgottenpassword" element={<AdminForgottenPassword />} />
-      <Route path="/admin-newpassword" element={<AdminNewpass />} />
-      <Route path="/ongoing-ride" element={<OngoingRide />} />
-      <Route path="/drivprofile-page" element={<DrivProfilepage />} />
-      <Route path="/change-password/*" element={<Changepass />} />
+
+      <Route path="/admin-login" element={<AdminLoginPage/>}/>
+      <Route path="/admin-forgottenpassword" element={<AdminForgottenPassword/>}/>
+      <Route path="/admin-newpassword" element={<AdminNewpass/>}/>
+      <Route path="/ongoing-ride" element={<OngoingRide/>}/>
+      <Route path="/Drivprofile-page" element={<DrivProfilepage/>}/>
+      <Route path="/change-password" element={<Changepass/>}/>
+      <Route path="/Ongoing" element={<Ongoing/>}/>
+      <Route path="/OTP" element={<OTP/>}/>
+      <Route path="/PersonalInfo" element={<PersonalInfo/>}/>
+      <Route path="/VehicleVerificationTWO" element={<VehicleVerificationTWO/>}/>
+      <Route path="/CurrentRide" element={<CurrentRide/>}/>
+      <Route path="/RequestRide" element={<RequestRide/>}/>
+      <Route path="/DriversRoutePage" element={<DriversRoutePage/>}/>
+      <Route path="/PassengersRoutePage" element={<PassengersRoutePage/>}/>
+      <Route path="/DriversHomeScreen" element={<DriversHomeScreen/>}/>
+
       {/* blame: @xpanvictor. can make a page later */}
       <Route
         path="*"
