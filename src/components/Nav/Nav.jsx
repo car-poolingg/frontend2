@@ -14,7 +14,9 @@ const NavBar = () => {
   return (
     <BootstrapNavbar bg="light" expand="md" expanded={expanded}>
       <Container>
-        <BootstrapNavbar.Brand href="#home">Your Logo</BootstrapNavbar.Brand>
+        <BootstrapNavbar.Brand href="#home">
+          <img src="/Assets/tag.svg" alt="logo" />
+        </BootstrapNavbar.Brand>
         <BootstrapNavbar.Toggle aria-controls="navbar" onClick={handleToggle} />
         <BootstrapNavbar.Collapse id="navbar">
           <Nav className="ml-auto">
