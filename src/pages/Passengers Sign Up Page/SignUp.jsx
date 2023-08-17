@@ -183,7 +183,7 @@ const SignUpPage = () => {
                             />
                         </div>
                         {/* <RememberMeButton/> */}
-                        <button onClick={() => navigate('/verifycode')} className='LoginBtn' type='submit'>
+                        <button className='LoginBtn' type='submit'>
                             Sign Up
                         </button>
                     </form>
