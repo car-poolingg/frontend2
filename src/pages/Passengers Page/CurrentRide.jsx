@@ -6,7 +6,7 @@ import { Icon } from '@iconify/react';
 const CurrentRide = () => {
   return (
     <div className='OngoingRide'>
-        <Header title={"ongoingride"} menuType={true}/>
+        <Header title={"Ongoing Ride"} menuType={true}/>
         <div className='BigWhiteBox'>
             
         <div>

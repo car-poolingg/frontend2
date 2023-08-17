@@ -157,6 +157,9 @@ function App() {
       <Route path="/Ongoing" element={<Ongoing/>}/>
       <Route path="/OTP" element={<OTP/>}/>
       <Route path="/PersonalInfo" element={<PersonalInfo/>}/>
+      <Route path="/VehicleVerificationTWO" element={<VehicleVerificationTWO/>}/>
+      <Route path="/CurrentRide" element={<CurrentRide/>}/>
+      <Route path="/RequestRide" element={<RequestRide/>}/>
       {/* blame: @xpanvictor. can make a page later */}
       <Route
         path="*"
