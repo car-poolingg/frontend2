@@ -32,3 +32,9 @@
   outline: none;
   border: none;
 }
+
+.HomescreenLocation{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
