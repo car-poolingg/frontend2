@@ -31,7 +31,7 @@ import "./uploadfile.css";
 
 //   export default FileChooser;
 
-const FileChooser = () => {
+const FileChooser = ({ name, inputOption }) => {
   const inputRef = useRef(null);
   const [fileState, setFileState] = useState(null);
 
@@ -40,6 +40,7 @@ const FileChooser = () => {
     inputRef.current.click();
   };
   const handleFileChange = (event) => {
+    inputOption(event);
     const file = event.target.files[0];
     setFileState(file);
     if (file) {
@@ -51,12 +52,14 @@ const FileChooser = () => {
     <div className='file-chooser'>
       <label>
         <button
+          type='button'
           onClick={handleClick}
           className='choose-button'>
           +Upload file
         </button>
         <input
           ref={inputRef}
+          name={name}
           type='file'
           accept='image/*'
           onChange={handleFileChange}
