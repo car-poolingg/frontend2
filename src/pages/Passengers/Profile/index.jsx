@@ -95,7 +95,7 @@ function Profile() {
           />
           <SettingOption
             name='Log Out'
-            onClick={logOut(navigate)}
+            onClick={() => logOut(navigate)}
             leftIon={
               <img
                 src='/Assets/logout.svg'
