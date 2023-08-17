@@ -38,7 +38,7 @@ const Document = () => {
     ev.preventDefault();
     console.log(documentState);
     if (boolAnyEmptyInList(Object.values(documentState))) {
-      throw new Error("Please fill all details");
+      alert("Please fill all fields");
     }
     try {
       const formData = new FormData();
