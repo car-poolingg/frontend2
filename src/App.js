@@ -62,7 +62,7 @@ function App() {
         path='/PersonalDetails'
         element={<PersonalDetails />}
       />
-      <Route path='/Document' element={<Document />} />
+      <Route path='/Document/*' element={<Document />} />
       <Route path='/IdentityVerification' element={<IdentityVerification />} />
       <Route path='/VehicleVerification' element={<VehicleVerification />} />
       <Route path='/License' element={<License />} />
@@ -151,6 +151,7 @@ function App() {
         path='/passengers/*'
         element={<PassengerHome />}
       />
+
       <Route path="/admin-login" element={<AdminLoginPage/>}/>
       <Route path="/admin-forgottenpassword" element={<AdminForgottenPassword/>}/>
       <Route path="/admin-newpassword" element={<AdminNewpass/>}/>
@@ -166,7 +167,7 @@ function App() {
       <Route path="/DriversRoutePage" element={<DriversRoutePage/>}/>
       <Route path="/PassengersRoutePage" element={<PassengersRoutePage/>}/>
       <Route path="/DriversHomeScreen" element={<DriversHomeScreen/>}/>
-      
+
       {/* blame: @xpanvictor. can make a page later */}
       <Route
         path="*"

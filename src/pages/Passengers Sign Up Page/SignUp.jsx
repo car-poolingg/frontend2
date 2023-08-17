@@ -6,7 +6,7 @@ import NavBar from "../../components/Nav/Nav";
 import PasswordInput from "../../components/Password/Password";
 import { boolAnyEmptyInList } from "../../utils/validators";
 import axiosInstance, { logAxiosResponse } from "../../utils/request";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 // import RememberMeButton from '../../components/RemeberMe/RememberMe';
 
 const SignUpPage = () => {
@@ -201,9 +201,7 @@ const SignUpPage = () => {
                         <p className='account'>
                             Already a user?{" "}
                             <span>
-                                <a href='/admin-login' className='signup'>
-                                    Log in
-                                </a>
+                                <Link to="/Login" className="signup">Log in</Link>
                             </span>
                         </p>
                     </div>
