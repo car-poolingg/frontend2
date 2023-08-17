@@ -63,9 +63,14 @@ const DriversLogin = () => {
       alert(JSON.stringify(response.data.msg))
       storeData(StorageConstants.IsDriver, true)
       storeData(StorageConstants.Email, validData.email)
+
       navigate(
-        `/Document/${validData.email}`,
+        `/VerifyPassword/${validData.email}`,
       )
+
+      // navigate(
+      //   `/Document/${validData.email}`,
+      // )
 
     } catch (errorRegistering) {
       logAxiosResponse(errorRegistering)
