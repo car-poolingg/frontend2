@@ -26,6 +26,24 @@ const VerificationInput = () => {
     }
   };
 
+  const handleResendToken = async () => {
+    try {
+      if (!email)
+        throw new Error("No email found, link broken!")
+      const response = await axiosInstance.post(
+        "/auth/resend-email",
+        {
+          email,
+        }
+      )
+
+      // token retrieval successful, proceed
+      alert(JSON.stringify(response.data.msg))
+    } catch (errorRetrievingToken) {
+      logAxiosResponse(errorRetrievingToken)
+    }
+  }
+
   const handleClearClick = () => {
     const updatedDigits = [...digits];
     if (activeSlot > 0) {
@@ -82,7 +100,7 @@ const VerificationInput = () => {
                   </div>
                 ))}
               </div>
-              <p className='resend'>Resend OTP?</p>
+              <p className='OTP' onClick={() => handleResendToken()} >Resend OTP?</p>
               <input className='SendBtn' type="submit" value="Confirm Code" />
             </form>
           </div>
