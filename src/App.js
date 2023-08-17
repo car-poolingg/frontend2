@@ -76,7 +76,7 @@ function App() {
         element={<ForgotPassword />}
       />
       <Route
-        path='/VerifyPassword/:email'
+        path='/VerifyPassword/:phone'
         element={<VerifyPassword />}
       />
       <Route
@@ -137,10 +137,6 @@ function App() {
       <Route
         path='/ForgotPassword'
         element={<ForgotPassword />}
-      />
-      <Route
-        path='/VerifyPassword'
-        element={<VerifyPassword />}
       />
 
       <Route
