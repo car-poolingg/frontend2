@@ -131,6 +131,10 @@ function App() {
         element={<DriversProfile />}
       />
       <Route
+        path='/DriversPostRide'
+        element={<DriversRoutePage />}
+      />
+      <Route
         path='/verifycode/:email'
         element={<VerificationInput />}
       />
