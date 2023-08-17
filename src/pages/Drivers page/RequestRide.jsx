@@ -1,9 +1,11 @@
 import React from 'react'
-import "./LoginPage.css"
-import Header from '../../components/global/Header/Header'
 import { Icon } from '@iconify/react';
+import "../../bootstrap.min.css"
+// import './Styles.scss';
+import Header from '../../components/global/Header/Header';
+import "../Passengers Page/LoginPage.css"
 
-const CurrentRide = () => {
+const RequestRide = () => {
   return (
     <div className='OngoingRide'>
         <Header title={"Ongoing Ride"} menuType={true}/>
@@ -20,10 +22,7 @@ const CurrentRide = () => {
                     <img src="/Assets/rectangle7.svg" alt="" />
                     <p className='text'>James Onigidi</p>
                 </div>
-                <div>
-                    <Icon icon="material-symbols:cancel" color="red" width="30" height="30" />
-                    <Icon icon="fluent:checkmark-circle-12-filled" color="blue" width="30" height="30" />
-                </div>
+                
             </div>
             <div class="line"></div>
             <div className='container'>
@@ -36,6 +35,10 @@ const CurrentRide = () => {
                     <p className='text2'>#300</p>
                 </div>
             </div>
+            <div className='AcceptOrDecline'>
+                <button className='AcceptingRide' type='submit'>Accept</button>
+                <button className='DecliningRide' type="submit">Decline</button>
+            </div>
         </div>
         <div className='RideBox'>
             <div className='whitebox'>
@@ -43,10 +46,7 @@ const CurrentRide = () => {
                     <img src="/Assets/rectangle7.svg" alt="" />
                     <p className='text'>Mary johnson</p>
                 </div>
-                <div>
-                    <Icon icon="material-symbols:cancel" color="red" width="30" height="30" />
-                    <Icon icon="fluent:checkmark-circle-12-filled" color="blue" width="30" height="30" />
-                </div>
+                
             </div>
             <div class="line"></div>
             <div className='container'>
@@ -59,12 +59,16 @@ const CurrentRide = () => {
                     <p className='text2'>#600</p>
                 </div>
             </div>
+            <div className='AcceptOrDecline'>
+                <button className='AcceptingRide' type='submit'>Accept</button>
+                <button className='DecliningRide' type="submit">Decline</button>
+            </div>
         </div>
         </div>
-        <button className='Btn'>Share Driver's Information</button>
+        
         </div>
     </div>
   )
 }
 
-export default CurrentRide
+export default RequestRide

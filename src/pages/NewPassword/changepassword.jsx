@@ -2,8 +2,18 @@ import React, { useState } from 'react';
 import './NewPassword.css';
 import PasswordInput from '../../components/Password/Password';
 import Header from '../../components/global/Header/Header';
+import axiosInstance, { logAxiosResponse } from '../../utils/request';
+import { getData } from '../../utils/api.storage';
+import StorageConstants from '../../utils/constants.storage';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const Changepass = () => {
+  const navigate = useNavigate()
+  const params = useParams()
+  const emailRaw = getData(StorageConstants.Email)
+  const email = emailRaw.success ? emailRaw.data : params.email
+
+
   const [oldPassword, setOldPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -24,7 +34,7 @@ const Changepass = () => {
     setError('');
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (newPassword !== confirmPassword) {
@@ -34,6 +44,29 @@ const Changepass = () => {
     } else {
       // Passwords match and old password is different - perform further actions (e.g., submit form)
       setError('');
+
+      try {
+        const response = await axiosInstance.post(
+          "/auth/reset-password",
+          {
+            email: email,
+            password: newPassword
+          }
+        )
+        // register successful, proceed
+        alert(JSON.stringify(response.data.msg))
+        navigate(
+          `/Profile`,
+        )
+        // TODO: store token here
+
+      } catch (errorRegistering) {
+        const axiosResponse = logAxiosResponse(errorRegistering)
+        if (axiosResponse.axiosError && axiosResponse.status == 401)
+          navigate(
+            `/VerifyPassword/${email}`,
+          )
+      };
     }
   };
 

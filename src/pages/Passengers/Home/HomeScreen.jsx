@@ -283,8 +283,8 @@ const HomeScreen = () => {
   const [mapLocation, setMapLocation] = useState([
     9.082, 8.6753,
   ]);
-  const callBackMethod = () => {
-    console.log("Callback method");
+  const callBackMethod = (e) => {
+    console.log("Callback method", e);
   };
   const [infoboxes, setInfoboxes] = useState([
     {
@@ -372,6 +372,8 @@ const HomeScreen = () => {
   };
 
   const handleMapClick = (e) => {
+    const clickedLocation = e.location;
+    console.log(clickedLocation);
     setMapLocation([
       e.latitude.toFixed(4),
       e.longitude.toFixed(4),
@@ -476,6 +478,7 @@ const HomeScreen = () => {
             />
           </button>
           <form onSubmit={handleSearch} className='input'>
+            <div className="HomescreenLocation">
             <div className='cus-input d-flex align-items-center rounded-lg '>
               <Icon
                 icon='akar-icons:search'
@@ -485,9 +488,25 @@ const HomeScreen = () => {
               />
               <input
                 type='text'
-                placeholder='Search location'
+                placeholder='Current Location'
                 ref={searchInputRef}
               />
+              
+            </div>
+            <div style={{marginTop: "5%"}} className='cus-input d-flex align-items-center rounded-lg '>
+              <Icon
+                icon='akar-icons:search'
+                color='##8A8894'
+                height={"14px"}
+                width={"14px"}
+              />
+              <input
+                type='text'
+                placeholder='Where are you Headed'
+                ref={searchInputRef}
+              />
+              
+            </div>
             </div>
             <button type='submit' hidden={true}>
               Search

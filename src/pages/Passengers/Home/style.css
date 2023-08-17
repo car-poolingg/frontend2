@@ -3,7 +3,7 @@
 }
 .map-menu-button {
   position: absolute;
-  top: 10px;
+  top: 24px;
   left: 20px;
   z-index: 10;
 }
@@ -12,7 +12,7 @@
 }
 .map-menu-button .input {
   position: absolute;
-  top: 14px;
+  top: 24px;
   left: 83px;
   z-index: 10;
 }
@@ -24,11 +24,17 @@
 }
 .cus-input {
   background-color: white;
-  padding: 12px 10px;
+  padding: 12px 16px;
   align-items: center;
   gap: 5px;
 }
 .cus-input input {
   outline: none;
   border: none;
+}
+
+.HomescreenLocation{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
