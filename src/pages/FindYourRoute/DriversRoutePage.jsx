@@ -17,7 +17,9 @@ const DriversRoutePage = () => {
         destination: [9.082, 8.6753],
         pickup: [9.082, 8.6753],
         date: new Date(),
-        time: ""
+        time: "",
+        availableSeats: 0,
+        rideDetails: ""
     })
 
     const handleRideState = (obj) => {
@@ -38,7 +40,7 @@ const DriversRoutePage = () => {
     }
 
     // cant start reusing now
-    const setDate = (ev) => {
+    const setData = (ev) => {
         handleRideState({
             [ev.target.name]: ev.target.value
         })
@@ -98,7 +100,7 @@ const DriversRoutePage = () => {
                     <div className='LocationTag'>
                         <div className='LocationName'>
                             <p className='TinyText'>Date</p>
-                            <input type="date" name="date" id="Date" placeholder='Choose date' className='LocationInput' />
+                            <input type="date" onChange={setData} value={rideData.date} name="date" id="Date" placeholder='Choose date' className='LocationInput' />
                         </div>
                     </div>
                 </div>
@@ -106,7 +108,7 @@ const DriversRoutePage = () => {
                     <div className='LocationTag'>
                         <div className='LocationName'>
                             <p className='TinyText'>Time</p>
-                            <input type="time" name="time" id="Destination" placeholder='Choose time' className='LocationInput' />
+                            <input type="time" onChange={setData} value={rideData.time} name="time" id="Destination" placeholder='Choose time' className='LocationInput' />
                         </div>
 
                     </div>
@@ -115,7 +117,7 @@ const DriversRoutePage = () => {
                     <div className='LocationTag'>
                         <div className='LocationName'>
                             <p className='TinyText'>Available Seats</p>
-                            <input type="text" name="AvailSeat" id="AvailSeat" placeholder='How many seats are available' className='LocationInput' />
+                            <input type="text" name="AvailSeat" onChange={setData} value={rideData.availableSeats} id="AvailSeat" placeholder='How many seats are available' className='LocationInput' />
                         </div>
 
                     </div>
@@ -124,7 +126,7 @@ const DriversRoutePage = () => {
                     <div className='LocationTag'>
                         <div className='LocationName'>
                             <p className='TinyText'>Ride Details</p>
-                            <input type="text" name="RideDets" id="RideDets" placeholder='Add Instructions' className='LocationInput' />
+                            <input type="text" onChange={setData} value={rideData.rideDetails} name="RideDets" id="RideDets" placeholder='Add Instructions' className='LocationInput' />
                         </div>
 
                     </div>
