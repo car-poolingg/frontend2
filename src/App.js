@@ -37,6 +37,8 @@ import PersonalInfo from "./pages/Drivers page/PersonalInfo";
 import VehicleVerificationTWO from "./pages/Drivers page/VehicleVerificationTWO";
 import RequestRide from "./pages/Drivers page/RequestRide";
 import CurrentRide from "./pages/Passengers Page/CurrentRide";
+import DriversRoutePage from "./pages/FindYourRoute/DriversRoutePage";
+import PassengersRoutePage from "./pages/FindYourRoute/PassengersRoutePage";
 
 
 function App() {
@@ -160,6 +162,8 @@ function App() {
       <Route path="/VehicleVerificationTWO" element={<VehicleVerificationTWO/>}/>
       <Route path="/CurrentRide" element={<CurrentRide/>}/>
       <Route path="/RequestRide" element={<RequestRide/>}/>
+      <Route path="/DriversRoutePage" element={<DriversRoutePage/>}/>
+      <Route path="/PassengersRoutePage" element={<PassengersRoutePage/>}/>
       {/* blame: @xpanvictor. can make a page later */}
       <Route
         path="*"
