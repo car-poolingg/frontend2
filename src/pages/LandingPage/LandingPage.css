@@ -189,7 +189,7 @@ line-height: 45px; /* 140.625% */
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
-        width: 500px; 
+        width: 100%; 
         height: 300px;
         background-color: #160a0a59;
         background-blend-mode: multiply;
