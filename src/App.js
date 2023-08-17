@@ -53,7 +53,7 @@ function App() {
         path='/PersonalDetails'
         element={<PersonalDetails />}
       />
-      <Route path='/Document' element={<Document />} />
+      <Route path='/Document/*' element={<Document />} />
       <Route path='/IdentityVerification' element={<IdentityVerification />} />
       <Route path='/VehicleVerification' element={<VehicleVerification />} />
       <Route path='/License' element={<License />} />

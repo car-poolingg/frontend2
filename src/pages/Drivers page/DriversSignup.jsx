@@ -7,6 +7,8 @@ import "./DriversPage.css"
 import { boolAnyEmptyInList } from '../../utils/validators';
 import axiosInstance, { logAxiosResponse } from '../../utils/request';
 import Header from '../../components/global/Header/Header';
+import { storeData } from '../../utils/api.storage';
+import StorageConstants from '../../utils/constants.storage';
 
 // @LightsidEsys the file pickers not working
 
@@ -59,6 +61,8 @@ const DriversLogin = () => {
       )
       // register successful, proceed
       alert(JSON.stringify(response.data.msg))
+      storeData(StorageConstants.IsDriver, true)
+      storeData(StorageConstants.Email, validData.email)
       navigate(
         `/Document/${validData.email}`,
       )
@@ -77,7 +81,7 @@ const DriversLogin = () => {
      </div>
       <h6 className='NavTopText' style={{marginBottom: "0px"}}>Drive with Tag</h6>
       </div> */}
-      <Header title={"Drive with Tag"}/>
+      <Header title={"Drive with Tag"} />
 
 
       <div className='FormPage'>

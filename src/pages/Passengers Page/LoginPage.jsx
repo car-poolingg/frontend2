@@ -38,7 +38,7 @@ const LoginPage = () => {
             storeData(StorageConstants.Token, successResponse.token)
             storeData(StorageConstants.UserAuthenticated, true)
             navigate(
-                `/Profile`,
+                `/passengers`,
             )
 
         } catch (errorRegistering) {

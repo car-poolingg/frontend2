@@ -2,7 +2,8 @@
 const StorageConstants = {
     Email: "Email",
     Token: "Token",
-    UserAuthenticated: "UserAuthenticated"
+    UserAuthenticated: "UserAuthenticated",
+    IsDriver: "IsDriver",
 }
 
 export default StorageConstants
