@@ -4,6 +4,7 @@ const StorageConstants = {
     Token: "Token",
     UserAuthenticated: "UserAuthenticated",
     IsDriver: "IsDriver",
+    AvailableRides: "AvailableRides"
 }
 
 export default StorageConstants

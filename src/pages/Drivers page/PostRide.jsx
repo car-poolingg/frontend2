@@ -11,7 +11,7 @@ import { storeData } from '../../utils/api.storage';
 import StorageConstants from '../../utils/constants.storage';
 
 
-const PassengersRoutePage = () => {
+const PDriversRoutePage = () => {
     const navigate = useNavigate()
 
     const [rideData, setRideData] = useState({
@@ -49,17 +49,9 @@ const PassengersRoutePage = () => {
         try {
             console.log(rideData)
             const rawResponse = await authAxiosInstance
-                .get(
+                .post(
                     "/ride",
-                    {
-                        params: {
-                            destination: [7.497848, 44.522325],
-                            pickup: [7.493366, 4.511394],
-                            "date": "2023-08-14",
-                            "time": "09:41",
-                            ...rideData,
-                        }
-                    }
+                    rideData
                 )
 
             const respData = rawResponse.data.ride
@@ -140,4 +132,4 @@ const PassengersRoutePage = () => {
 
 // '/AvailableDrivers')
 
-export default PassengersRoutePage
+export default PDriversRoutePage

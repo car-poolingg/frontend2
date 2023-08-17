@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Icon } from '@iconify/react';
 import { Link } from 'react-router-dom';
 import "../../bootstrap.min.css"
@@ -8,7 +8,7 @@ import PasswordInput from "../../components/Password/Password"
 // import RememberMeButton from '../../components/RemeberMe/RememberMe';
 import axiosInstance, { logAxiosResponse } from '../../utils/request';
 import { useNavigate } from 'react-router-dom';
-import { storeData } from '../../utils/api.storage';
+import { getData, storeData } from '../../utils/api.storage';
 import StorageConstants from '../../utils/constants.storage';
 
 
@@ -19,6 +19,15 @@ const LoginPage = () => {
         password: ""
     })
     const navigate = useNavigate()
+
+    useEffect(() => {
+        const userIsAuthenticatedRaw = getData(StorageConstants.UserAuthenticated)
+        const isUserAuthenticated = userIsAuthenticatedRaw.success && userIsAuthenticatedRaw.data
+
+        if (isUserAuthenticated) {
+            navigate('/profile')
+        }
+    }, [])
 
     const handleUserLogin = async (eventObj) => {
         eventObj.preventDefault();

@@ -76,7 +76,7 @@ function App() {
         element={<ForgotPassword />}
       />
       <Route
-        path='/VerifyPassword/:email'
+        path='/VerifyPassword/:phone'
         element={<VerifyPassword />}
       />
       <Route
@@ -131,16 +131,16 @@ function App() {
         element={<DriversProfile />}
       />
       <Route
-        path='/verifycode'
+        path='/DriversPostRide'
+        element={<DriversRoutePage />}
+      />
+      <Route
+        path='/verifycode/:email'
         element={<VerificationInput />}
       />
       <Route
         path='/ForgotPassword'
         element={<ForgotPassword />}
-      />
-      <Route
-        path='/VerifyPassword'
-        element={<VerifyPassword />}
       />
 
       <Route
@@ -152,21 +152,21 @@ function App() {
         element={<PassengerHome />}
       />
 
-      <Route path="/admin-login" element={<AdminLoginPage/>}/>
-      <Route path="/admin-forgottenpassword" element={<AdminForgottenPassword/>}/>
-      <Route path="/admin-newpassword" element={<AdminNewpass/>}/>
-      <Route path="/ongoing-ride" element={<OngoingRide/>}/>
-      <Route path="/Drivprofile-page" element={<DrivProfilepage/>}/>
-      <Route path="/change-password" element={<Changepass/>}/>
-      <Route path="/Ongoing" element={<Ongoing/>}/>
-      <Route path="/OTP" element={<OTP/>}/>
-      <Route path="/PersonalInfo" element={<PersonalInfo/>}/>
-      <Route path="/VehicleVerificationTWO" element={<VehicleVerificationTWO/>}/>
-      <Route path="/CurrentRide" element={<CurrentRide/>}/>
-      <Route path="/RequestRide" element={<RequestRide/>}/>
-      <Route path="/DriversRoutePage" element={<DriversRoutePage/>}/>
-      <Route path="/PassengersRoutePage" element={<PassengersRoutePage/>}/>
-      <Route path="/DriversHomeScreen" element={<DriversHomeScreen/>}/>
+      <Route path="/admin-login" element={<AdminLoginPage />} />
+      <Route path="/admin-forgottenpassword" element={<AdminForgottenPassword />} />
+      <Route path="/admin-newpassword" element={<AdminNewpass />} />
+      <Route path="/ongoing-ride" element={<OngoingRide />} />
+      <Route path="/Drivprofile-page" element={<DrivProfilepage />} />
+      <Route path="/change-password" element={<Changepass />} />
+      <Route path="/Ongoing" element={<Ongoing />} />
+      <Route path="/OTP/:email" element={<OTP />} />
+      <Route path="/PersonalInfo" element={<PersonalInfo />} />
+      <Route path="/VehicleVerificationTWO" element={<VehicleVerificationTWO />} />
+      <Route path="/CurrentRide" element={<CurrentRide />} />
+      <Route path="/RequestRide" element={<RequestRide />} />
+      <Route path="/DriversRoutePage" element={<DriversRoutePage />} />
+      <Route path="/PassengersRoutePage" element={<PassengersRoutePage />} />
+      <Route path="/DriversHomeScreen" element={<DriversHomeScreen />} />
 
       {/* blame: @xpanvictor. can make a page later */}
       <Route
