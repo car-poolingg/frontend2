@@ -1,5 +1,5 @@
 * {
-  overflow-x: hidden !important;
+  overflow-x: visible !important;
 }
 .map-menu-button {
   position: absolute;
@@ -33,8 +33,8 @@
   border: none;
 }
 
-.HomescreenLocation{
+/* .HomescreenLocation{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-}
+} */

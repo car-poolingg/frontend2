@@ -478,35 +478,35 @@ const HomeScreen = () => {
             />
           </button>
           <form onSubmit={handleSearch} className='input'>
-            <div className="HomescreenLocation">
-            <div className='cus-input d-flex align-items-center rounded-lg '>
-              <Icon
-                icon='akar-icons:search'
-                color='##8A8894'
-                height={"14px"}
-                width={"14px"}
-              />
-              <input
-                type='text'
-                placeholder='Current Location'
-                ref={searchInputRef}
-              />
-              
-            </div>
-            <div style={{marginTop: "5%"}} className='cus-input d-flex align-items-center rounded-lg '>
-              <Icon
-                icon='akar-icons:search'
-                color='##8A8894'
-                height={"14px"}
-                width={"14px"}
-              />
-              <input
-                type='text'
-                placeholder='Where are you Headed'
-                ref={searchInputRef}
-              />
-              
-            </div>
+            <div className='HomescreenLocation'>
+              <div className='cus-input d-flex align-items-center rounded-lg '>
+                <Icon
+                  icon='akar-icons:search'
+                  color='##8A8894'
+                  height={"14px"}
+                  width={"14px"}
+                />
+                <input
+                  type='text'
+                  placeholder='Current Location'
+                  ref={searchInputRef}
+                />
+              </div>
+              <div
+                style={{ marginTop: "5%" }}
+                className='cus-input d-flex align-items-center rounded-lg '>
+                <Icon
+                  icon='akar-icons:search'
+                  color='##8A8894'
+                  height={"14px"}
+                  width={"14px"}
+                />
+                <input
+                  type='text'
+                  placeholder='Where are you Headed'
+                  ref={searchInputRef}
+                />
+              </div>
             </div>
             <button type='submit' hidden={true}>
               Search
