@@ -1,5 +1,5 @@
 * {
-  overflow-x: hidden !important;
+  overflow: visible !important;
 }
 .map-menu-button {
   position: absolute;
