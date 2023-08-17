@@ -1,13 +1,12 @@
 import React from 'react'
 import { Icon } from '@iconify/react';
 import "../../bootstrap.min.css"
-import "./LoginPage.css" 
 import NavBar from '../../components/Nav/Nav'
 import PasswordInput from "../../components/Password/Password"
 // import RememberMeButton from '../../components/RemeberMe/RememberMe';
 
 
- const LoginPage = () => {
+ const AdminLoginPage = () => {
   return (
     <div className='Login-page'>
         <NavBar/>
@@ -60,4 +59,4 @@ import PasswordInput from "../../components/Password/Password"
   )
 }
 
-export default LoginPage
+export default AdminLoginPage

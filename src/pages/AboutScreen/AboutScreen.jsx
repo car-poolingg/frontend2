@@ -1,16 +1,18 @@
 import React from 'react'
 import "../../bootstrap.min.css"
 import "./AboutScreen.css"
+import Header from '../../components/global/Header/Header'
 
 const AboutScreen = () => {
   return (
     <div className='AboutScreen'>
-        <div className='BlueContainer'>
+        {/* <div className='BlueContainer'>
             <div className='WhiteContainer'>
                 <a href=""><img className='menu' src="/Assets/menu.svg" alt="menu" /></a>
             </div>
             <p className='About'>About Tag</p>
-        </div>
+        </div> */}
+        <Header title={"About Tag"} menuType={true}/>
 
         <div className='Whitebox'>
             <p className='header'>About: Redefining Your Commute</p>

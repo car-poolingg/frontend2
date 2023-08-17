@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaStar } from 'react-icons/fa';
 import './RateDriver.css'; // Import the CSS file you created
 
+
 const RatePasseng = () => {
   const [rating, setRating] = useState(0); // Initial rating state
   const [feedback, setFeedback] = useState(''); // Initial feedback state
