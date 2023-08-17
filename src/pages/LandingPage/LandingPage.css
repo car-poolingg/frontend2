@@ -3,7 +3,7 @@
     .landing-page{
         font-family: 'Rubik', sans-serif;
         font-size: larger;
-    
+        overflow-x: hidden;
         
     }
     .textstyle{
