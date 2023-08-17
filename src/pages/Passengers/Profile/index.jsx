@@ -1,11 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../../../components/global/Header/Header";
 import "./profile.css";
 import SettingOption from "../../../components/global/SettingOption";
 import { useNavigate } from "react-router-dom";
+import { authAxiosInstance, logAxiosResponse } from "../../../utils/request";
+import { logOut } from "../../../utils/user.utils";
 
 function Profile() {
   const navigate = useNavigate();
+
+  // can make custom hook here soon
+  const [userDetails, setUserDetails] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    role: "",
+    createdAt: "",
+    isVerified: {}
+  })
+
+  const fetchUser = async () => {
+    try {
+      const rawUserData = await authAxiosInstance("/user")
+      setUserDetails(rawUserData.data.user)
+    } catch (errorProfile) {
+      logAxiosResponse(errorProfile)
+    }
+  }
+
+  useEffect(() => {
+    fetchUser()
+  }, [])
+
   return (
     <div className='profile-container'>
       <Header title={<h4>Profile</h4>} extend={true} />
@@ -26,10 +53,10 @@ function Profile() {
           </div>
           <div className=''>
             <h4 className='mx-auto w-fit text-black name-text'>
-              Kate Lesley
+              {userDetails.firstName} {userDetails.lastName}
             </h4>
             <span className='text-gray email-text'>
-              katelesley@gmail.com
+              {userDetails.email}
             </span>
           </div>
           <hr className='hr' />
@@ -68,6 +95,7 @@ function Profile() {
           />
           <SettingOption
             name='Log Out'
+            onClick={logOut(navigate)}
             leftIon={
               <img
                 src='/Assets/logout.svg'

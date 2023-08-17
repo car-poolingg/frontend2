@@ -1,9 +1,9 @@
 import { Icon } from "@iconify/react";
 import React from "react";
 
-function SettingOption({ name = "test", leftIon, arrow }) {
+function SettingOption({ name = "test", leftIon, arrow, onClick }) {
   return (
-    <div className='d-flex align-items-center justify-content-between collapsible '>
+    <div className='d-flex align-items-center justify-content-between collapsible ' onClick={() => onClick()}>
       <div className='d-flex align-items-center'>
         {leftIon}
         <span>{name}</span>
