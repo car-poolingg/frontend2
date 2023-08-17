@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Icon } from '@iconify/react';
+import { Link } from 'react-router-dom';
 import "../../bootstrap.min.css"
 import "./LoginPage.css"
 import NavBar from '../../components/Nav/Nav'
@@ -94,7 +95,7 @@ const LoginPage = () => {
                             <div className='checkrem'>
                                 <input type="checkbox" className='check' /><span className='remember'>Remember me</span>
                             </div>
-                            <a href='' className='forgotten'>Forgotten Password?</a>
+                            <Link to="/ForgotPassword" className='forgotten'>Forgotten Password?</Link>
                         </div>
                         {/* <RememberMeButton/> */}
                         <input className='LoginBtn' type="submit" value="Log in" />
