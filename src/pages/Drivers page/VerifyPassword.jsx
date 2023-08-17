@@ -11,7 +11,7 @@ import StorageConstants from '../../utils/constants.storage';
 const VerifyPassword = () => {
   const [token, setToken] = useState(Array(4));
   const params = useParams();
-  const userEmail = params.email
+  const phone = params.phone
   const navigate = useNavigate()
 
   const changeTokenIndex = (e) => {
@@ -23,19 +23,20 @@ const VerifyPassword = () => {
     try {
       if (token.some(value => !value))
         throw new Error("Fill the token please")
-      if (!userEmail)
-        throw new Error("No email found, link broken!")
+      if (!phone)
+        throw new Error("No phone found, link broken!")
       // form valid, proceed
       const response = await axiosInstance.post(
-        "/auth/password-token",
+        "/driver-auth/verify-phone",
         {
-          email: userEmail,
+          phone,
           token: token.join("")
         }
       )
       // verify successful, proceed
       alert(JSON.stringify(response.data.msg))
-      storeData(StorageConstants.Email, userEmail)
+
+      storeData(StorageConstants.IsDriver, true)
       navigate('/Profile')
     } catch (errorVerifying) {
       logAxiosResponse(errorVerifying)
@@ -44,12 +45,12 @@ const VerifyPassword = () => {
 
   const handleResendToken = async () => {
     try {
-      if (!userEmail)
+      if (!phone)
         throw new Error("No email found, link broken!")
       const response = await axiosInstance.post(
-        "/auth/resend-email",
+        "/driver-auth/resend-token",
         {
-          email: userEmail,
+          phone,
         }
       )
 

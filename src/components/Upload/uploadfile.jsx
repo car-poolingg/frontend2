@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { Icon } from '@iconify/react';
-import './uploadfile.css';
+import React, { useRef, useState } from "react";
+import { Icon } from "@iconify/react";
+import "./uploadfile.css";
 
 // const FileChooser = () => {
 //     const [selectedFile, setSelectedFile] = useState(null);
-  
+
 //     const handleFileChange = (event) => {
 //       const file = event.target.files[0];
 //       setSelectedFile(file);
 //     };
-  
+
 //     return (
 //       <div className="file-chooser">
 //         <input
@@ -28,31 +28,47 @@ import './uploadfile.css';
 //       </div>
 //     );
 //   };
-  
+
 //   export default FileChooser;
 
-const FileChooser = () => {
-    const handleFileChange = (event) => {
-      const file = event.target.files[0];
-      if (file) {
-        console.log('Selected file:', file.name);
-      }
-    };
-  
-    return (
-      <div className="file-chooser">
-        <label>
-          <button className="choose-button">+Upload file</button>
-          <input
-            type="file"
-            accept="image/*"
-            onChange={handleFileChange}
-            style={{ display: 'none' }}
-          />
-        </label>
-      </div>
-    );
+const FileChooser = ({ name, inputOption }) => {
+  const inputRef = useRef(null);
+  const [fileState, setFileState] = useState(null);
+
+  const handleClick = () => {
+    // 👇️ open file input box on click of another element
+    inputRef.current.click();
   };
-  
-  export default FileChooser;
-  
+  const handleFileChange = (event) => {
+    inputOption(event);
+    const file = event.target.files[0];
+    setFileState(file);
+    if (file) {
+      console.log("Selected file:", file.name);
+    }
+  };
+
+  return (
+    <div className='file-chooser'>
+      <label>
+        <button
+          type='button'
+          onClick={handleClick}
+          className='choose-button'>
+          +Upload file
+        </button>
+        <input
+          ref={inputRef}
+          name={name}
+          type='file'
+          accept='image/*'
+          onChange={handleFileChange}
+          style={{ display: "none" }}
+        />
+      </label>
+      {fileState && <p>Selected file: {fileState.name}</p>}
+    </div>
+  );
+};
+
+export default FileChooser;

@@ -7,6 +7,7 @@ import OngoingRides from "../Rides/Ongoing";
 import FindRide from "../Rides/Find";
 import Header from "../../../components/global/Header/Header";
 import HomeScreen from "./HomeScreen";
+import PassengersRoutePage from "../../FindYourRoute/PassengersRoutePage";
 
 function PassengerHome() {
   return (
@@ -25,7 +26,8 @@ function PassengerHome() {
         path='ongoingRides'
         element={<OngoingRides />}
       />
-      <Route path='findRide' element={<FindRide />} />
+      {/* <Route path='findRide' element={<FindRide />} /> */}
+      <Route path='findRide' element={<PassengersRoutePage />} />
     </Routes>
   );
 }

@@ -63,9 +63,8 @@ const DriversLogin = () => {
       alert(JSON.stringify(response.data.msg))
       storeData(StorageConstants.IsDriver, true)
       storeData(StorageConstants.Email, validData.email)
-
       navigate(
-        `/VerifyPassword/${validData.email}`,
+        `/VerifyPassword/${validData.phone}`,
       )
 
       // navigate(
