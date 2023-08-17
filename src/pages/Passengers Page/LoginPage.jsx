@@ -31,12 +31,15 @@ const LoginPage = () => {
                 }
             )
             // register successful, proceed
-            alert(JSON.stringify(response.data.msg))
+            const successResponse = response.data
+            alert(successResponse.msg ?? "Login successful")
             storeData(StorageConstants.Email, loginData.email)
+            // TODO: store token here
+            storeData(StorageConstants.Token, successResponse.token)
+            storeData(StorageConstants.UserAuthenticated, true)
             navigate(
                 `/Profile`,
             )
-            // TODO: store token here
 
         } catch (errorRegistering) {
             const axiosResponse = logAxiosResponse(errorRegistering)

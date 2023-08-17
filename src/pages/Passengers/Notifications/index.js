@@ -18,23 +18,30 @@ function Notifications() {
     }
   ])
 
-  const fetchNotifications = () => {
-    setInterval(async () => {
-      try {
-        const rawNotifications = await authAxiosInstance.
-          get("/notify")
+  const fetchNotifications = async () => {
+    try {
+      const rawNotifications = await authAxiosInstance.
+        get("/notify")
 
-        console.log(rawNotifications)
+      const fetchedNotifications = rawNotifications.data
 
-        // TODO: set notifications
-      } catch (errorFetchingNotifications) {
-        console.log(errorFetchingNotifications)
+      if (fetchedNotifications.message == "Success") {
+        setNotifications(fetchedNotifications.notifications)
       }
-    }, 10_000)
+
+      // TODO: set notifications
+    } catch (errorFetchingNotifications) {
+      console.log(errorFetchingNotifications)
+    }
+  }
+
+  const fetchNotificationsTimer = () => {
+    setInterval(fetchNotifications, 10_000)
   }
 
   useEffect(() => {
     fetchNotifications()
+    fetchNotificationsTimer()
   }, [])
 
   return (
