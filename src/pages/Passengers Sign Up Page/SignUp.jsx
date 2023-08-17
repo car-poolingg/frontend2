@@ -7,6 +7,8 @@ import PasswordInput from "../../components/Password/Password";
 import { boolAnyEmptyInList } from "../../utils/validators";
 import axiosInstance, { logAxiosResponse } from "../../utils/request";
 import { Link, useNavigate } from "react-router-dom";
+import { storeData } from "../../utils/api.storage";
+import StorageConstants from "../../utils/constants.storage";
 // import RememberMeButton from '../../components/RemeberMe/RememberMe';
 
 const SignUpPage = () => {
@@ -52,8 +54,9 @@ const SignUpPage = () => {
             )
             // register successful, proceed
             alert(JSON.stringify(response.data.msg))
+            storeData(StorageConstants.Email, validData.email)
             navigate(
-                `/VerifyPassword/${validData.email}`,
+                `/verifycode/${validData.email}`,
             )
 
         } catch (errorRegistering) {
